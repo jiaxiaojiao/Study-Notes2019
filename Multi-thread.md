@@ -198,6 +198,14 @@ Disruptor是一个高性能的异步处理框架，或者可以认为是最快�
 
 **JDK内置的内存消息队列：**
 
+<table>
+    <tr><th>队列</th><th>加锁方式</th><th>是否有界</th><th>数据结构</th></tr>
+    <tr><td>ArrayBlockingQueue</td><td>加锁</td><td>有界</td><td>ArrayList</td></tr>
+    <tr><td>LinkedBlockingQueue</td><td>加锁</td><td>无界</td><td>LinkedList</td></tr>
+    <tr><td>ConcurrentLinkedQueue</td><td>CAS</td><td>无界</td><td>LinkedList</td></tr>
+    <tr><td>LinkedTransferQueue</td><td>CAS</td><td>无界</td><td>LinkedList</td></tr>
+</table>
+
 我们知道CAS算法比通过加锁实现同步性能高很多，而上表可以看出基于CAS实现的队列都是无界的，而有界队列是通过同步实现的。在系统稳定性要求比较高的场景下，为了防止生产者速度过快，如果采用无界队列会最终导致内存溢出，只能选择有界队列。而有界队列只有ArrayBlockingQueue，该队列是通过加锁实现的，在请求锁和释放锁时对性能开销很大，这时候基于有界队列的高性能的Disruptor就应运而生。
 
 **Disruptor如何实现高性能：**

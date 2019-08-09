@@ -6,6 +6,8 @@
 
 - [一些概念](Basic-Concept.md)
 
+    - [可见性/原子性/有序性](Basic-Concept.md#可见性原子性有序性)
+
 - [Java基础](Java.md)
 
     - [JDK8 新特性](JDK8.md)

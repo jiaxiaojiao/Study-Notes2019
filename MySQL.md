@@ -2,7 +2,7 @@
 
 MySQL是一个关系型数据库管理系统，开发源码。
 
-#### 存储引擎：
+### 存储引擎：
 
 - MyISAM
 
@@ -12,17 +12,17 @@ MySQL是一个关系型数据库管理系统，开发源码。
 
     事务型数据库的首选引擎，支持ACID事务，支持行级锁定, MySQL 5.5 起成为默认数据库引擎。
 
-#### MySQL版本：
+### MySQL版本：
 	
 	2019-07-22  MySQL 8.0.17
 
-#### MySQL文档存储体系结构
+### MySQL文档存储体系结构
 
 MySQL Document Store architecture （来自官网）
 
 ![MySQL Document Store architecture](images/MySQL-Document-Store-architecture.png)
 
-#### 优化InnoDB查询（在每个表上创建合适的索引）（来自官网）
+### 优化InnoDB查询（在每个表上创建合适的索引）（来自官网）
 
 1.	因为每个InnoDB表都有一个主键(无论是否请求主键)，所以为每个表指定一组主键列，这些列用于最重要和时间关键的查询。
 
@@ -32,7 +32,7 @@ MySQL Document Store architecture （来自官网）
 
 4.	如果索引列不能包含任何空值，则在创建表时将其声明为NOT NULL。当优化器知道每个列是否包含空值时，它可以更好地确定对查询使用哪个索引最有效。
 
-#### MySQL查看版本号-Windows：
+### MySQL查看版本号-Windows：
 
 - 命令行模式登录MySQL
 
@@ -46,7 +46,7 @@ MySQL Document Store architecture （来自官网）
 
 ![MySQL-Version](images/MySQL-Version-3.png)
 
-#### SQL 
+### SQL 
 
 修改字段类型
 

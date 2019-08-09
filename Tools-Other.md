@@ -2,7 +2,7 @@
 
 - [常见的Bean映射工具（BeanUtils Dozer）](#常见的Bean映射工具)
 
-#### 常见的Bean映射工具：
+### 常见的Bean映射工具：
 
 不同业务层传输对象存在不同的格式，因此我们需要编写映射代码将对象中的属性值从一种类型转成另一种类型。进行这种转换除了手动编写大量的get/set代码，还可以使用一些方便的类库，常用的有apache的BeanUtils，spring的BeanUtils，cglib的BeanCopier。
 

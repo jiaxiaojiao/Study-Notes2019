@@ -1,6 +1,6 @@
 ## JDK8特性
 
-#### Stream 流处理
+### Stream 流处理
 
 - toList  把流中所有元素收集到List中
 - toSet  把流中的所有元素收集到Set中，删除重复项
@@ -16,7 +16,7 @@
 - groupingBy  根据流中元素的某个值对流中的元素进行分组，并将属性值作为结果map的键。
 - partitioningBy  根据流中每个元素应用谓语的结果来对项目进行分区
 
-#### Lambda表达式
+### Lambda表达式
 
 ```text
 // 从List中获取一个属性集合：

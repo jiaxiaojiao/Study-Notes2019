@@ -2,7 +2,7 @@
 
 Nginx是一款高性能的http服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器。
 
-#### 应用场景
+### 应用场景
 
 1. HTTP服务器。用作静态网页服务器。
 
@@ -10,11 +10,11 @@ Nginx是一款高性能的http服务器/反向代理服务器及电子邮件（I
 
 3. 负载均衡。
 
-#### Linux上安装Nginx
+### Linux上安装Nginx
 
-#### Nginx实现负载均衡
+### Nginx实现负载均衡
 
-#### Nginx日志
+### Nginx日志
 
 Nginx日志主要有两种：访问日志和错误日志。
 
@@ -26,7 +26,7 @@ Nginx日志主要有两种：访问日志和错误日志。
 
 通过访问日志，你可以得到用户地域来源、跳转来源、使用终端、某个URL访问量等相关信息；通过错误日志，你可以得到系统某个服务或server的性能瓶颈等。
 
-##### 访问日志[Access.log]
+**访问日志[Access.log]**
 
 <table>
     <tr><th>变量名称</th><th>变量描述</th><th>举例说明</th></tr>
@@ -47,7 +47,7 @@ Nginx日志主要有两种：访问日志和错误日志。
     <tr><td>$upstream_response_time</td><td>请求过程中，upstream响应时间</td><td>0.002</td></tr>
 </table>
 
-##### 错误日志[Error.log]
+**错误日志[Error.log]**
 
 <table>
     <tr><th>错误信息</th><th>错误说明</th></tr>
@@ -79,7 +79,7 @@ Nginx日志主要有两种：访问日志和错误日志。
 </table>
 
 
-#### Nginx反向代理（nginx.conf 来自网络）
+### Nginx反向代理（nginx.conf 来自网络）
 
 ```text
 worker_processes  1;

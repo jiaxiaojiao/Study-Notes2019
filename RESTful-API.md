@@ -2,23 +2,23 @@
 
 RESTful API是目前比较成熟的一套互联网应用程序的API设计理论。
 
-#### 1. 协议。
+### 1. 协议。
 
 API与用户的通信协议，总是使用HTTPs协议。
 
-#### 2. 域名。
+### 2. 域名。
 
 尽量将API部署在专用域名。
 
 	https://api.example.com
 
-#### 3. 版本。
+### 3. 版本。
 
 应该将API的版本号放入URL
 
     https://api.example.com/v1/
 
-#### 4. 路径。
+### 4. 路径。
 
 名词。所用的名词往往与数据库的表名对应。
 
@@ -26,7 +26,7 @@ API与用户的通信协议，总是使用HTTPs协议。
 	https://api.example.com/v1/animals
 	https://api.example.com/v1/employees
 
-#### 5. HTTP动词
+### 5. HTTP动词
 
 对于资源的具体操作类型，由HTTP动词表示。
 
@@ -54,7 +54,7 @@ API与用户的通信协议，总是使用HTTPs协议。
 	GET /zoos/ID/animals：列出某个指定动物园的所有动物
 	DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
 
-#### 6. 过滤信息（Filtering）
+### 6. 过滤信息（Filtering）
 
 如果记录数量很多，服务器不可能都将它们返回给用户。API应该提供参数，过滤返回结果。
 
@@ -68,7 +68,7 @@ API与用户的通信协议，总是使用HTTPs协议。
 
 参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复。比如，GET /zoo/ID/animals 与 GET /animals?zoo_id=ID 的含义是相同的。
 
-#### 7. 状态码（Status Codes）
+### 7. 状态码（Status Codes）
 
 服务器向用户返回的状态码和提示信息，常见的有以下一些（方括号中是该状态码对应的HTTP动词）。
 
@@ -85,7 +85,7 @@ API与用户的通信协议，总是使用HTTPs协议。
 	422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。
 	500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。
 
-#### 8. 错误处理（Error handling）
+### 8. 错误处理（Error handling）
 
 如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将error作为键名，出错信息作为键值即可。
 
@@ -93,7 +93,7 @@ API与用户的通信协议，总是使用HTTPs协议。
 		error: "Invalid API key"
 	}
 
-#### 9. 返回结果
+### 9. 返回结果
 针对不同操作，服务器向用户返回的结果应该符合以下规范。
 
 	GET /collection：返回资源对象的列表（数组）
@@ -104,7 +104,7 @@ API与用户的通信协议，总是使用HTTPs协议。
 	DELETE /collection/resource：返回一个空文档
 
 
-#### 10. Hypermedia API
+### 10. Hypermedia API
 
 RESTful API最好做到Hypermedia，即返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么。
 
@@ -138,7 +138,7 @@ Hypermedia API的设计被称为HATEOAS。Github的API就是这种设计，访�
 上面代码表示，服务器给出了提示信息，以及文档的网址。
 
 
-#### 11. 其他
+### 11. 其他
 
 API的身份认证应该使用OAuth 2.0框架。
 

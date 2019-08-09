@@ -1,10 +1,10 @@
 ## Java基础
 
-#### slf4j日志
+### slf4j日志
 
 打印多个参数的日志 logger.info("id:[{}], name:[{}]", id , name);
 
-#### JSON转换
+### JSON转换
 ```text
 com.alibaba.fastjson.JSON
 // List 转 JSON
@@ -13,9 +13,9 @@ String str = JSON.toJSONString(list);
 List<User> list = JSON.parseObject(str, new TypeReference<List<User>>(){});
 List<User> list = JSON.parseArray(str, User.class);
 ```
-#### Java关键字
+### Java关键字
 
-##### volatile
+**volatile**
 
 Java语言提供了一种稍弱的同步机制，即volatile变量，用来确保将变量的更新操作通知到其他线程。当把变量声明为volatile类型后，编译器与运行时都会注意到这个变量是共享的，因此不会将该变量上的操作与其他内存操作一起重排序。volatile变量不会被缓存在寄存器或者对其他处理器不可见的地方，因此在读取volatile类型的变量时总会返回最新写入的值。
 
@@ -33,7 +33,7 @@ volatile 性能：volatile 的读性能消耗与普通变量几乎相同，但�
 
 volatile不能保证具有原子性。
 
-##### synchronized
+**synchronized**
 
 - synchronized
     
@@ -48,7 +48,7 @@ volatile不能保证具有原子性。
 	
 	- 实例锁和类锁之间互不干扰。
 
-##### transient
+**transient**
 
 transient修饰符仅适用于变量，不适用于方法和类。
 

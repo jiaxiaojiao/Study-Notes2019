@@ -79,4 +79,60 @@ Nginx日志主要有两种：访问日志和错误日志。
 </table>
 
 
+#### Nginx反向代理（nginx.conf 来自网络）
 
+```text
+worker_processes  1;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    access_log  logs/access.log;
+
+    sendfile        on;
+
+    keepalive_timeout  65;
+
+    gzip  on;
+
+    server {
+        listen 80;
+        server_name dev.php.manage.com;
+
+        location ~\.php$ {
+            root    e:/PHPTools/root/;
+            include php.conf;
+        }
+		
+		location / {
+			root    e:/PHPTools/root/;
+		}
+    }
+
+    server {
+        listen       80;
+        server_name  test.nginx.com;
+		
+        location / {
+            proxy_pass   http://172.18.144.23:4789/;
+        }
+
+        location /buy {
+            proxy_pass   http://172.18.144.23:5789/;
+        }				
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+    }
+}
+```

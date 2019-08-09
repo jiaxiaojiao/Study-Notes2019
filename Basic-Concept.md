@@ -122,3 +122,9 @@ synchronized 一个变量在同一个时刻只允许一个线程对其进行lock
 
 同一个业务，部署在多个服务器上。
 
+#### JMS
+
+Java Message Service，Java消息服务应用程序接口，是一个Java平台中关于面向消息中间件（MOM）的API，用于在两个应用程序之间或分布式系统中发送消息，进行异步通信。
+
+#### BlockingQueue
+

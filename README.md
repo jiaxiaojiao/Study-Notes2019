@@ -35,7 +35,7 @@
 工具：
 - [Git](Git.md) 分布式版本控制系统
 - [Jenkins](Jenkins.md) 自动化部署
-- [IDEA使用](IDE-IDEA.md)  Java开发集成环境。
+- [IDEA使用](IDE/IDEA.md)  Java开发集成环境。
 
 其他：
 - [REST](RESTful-API.md)  API设计理论

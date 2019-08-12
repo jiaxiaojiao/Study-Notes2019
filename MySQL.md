@@ -69,3 +69,4 @@ MySQL Document Store architecture （来自官网）
 
     ALTER TABLE table_name ADD column_name datatype;
 
+[**返回首页目录**](README.md)

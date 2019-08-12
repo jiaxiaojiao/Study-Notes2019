@@ -6,7 +6,7 @@
 - [一些概念](Basic-Concept.md)
 - [Java基础](Java.md)
 - [多线程](Multi-thread.md)
-- [Spring](Spring.md)
+- [Spring](Spring/Spring.md)
 - [Thymeleaf](Thymeleaf.md)  Java模板引擎
 
 持久层框架：

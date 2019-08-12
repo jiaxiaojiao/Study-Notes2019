@@ -21,6 +21,8 @@
 - **Orika**
 
     特性丰富，速度又快。底层采用了javassist类库生成Bean映射的字节码，之后直接加载执行生成的字节码文件，因此在速度上比使用反射进行赋值会快很多。
+    
+    Github上项目的地址： <https://github.com/orika-mapper/orika>
 
 - [**MapStruct**](http://mapstruct.org/)
     

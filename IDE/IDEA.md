@@ -63,9 +63,11 @@
 
 自动清除无效import
 ```text
-File -> Settings -> Editor -> General -> Auto Import 
-
+菜单栏File -> Settings -> Editor -> General -> Auto Import 
 勾选动态优化导入（仅当前项目） Optimize imports on the fly(for current project)
+
+或者：
+菜单栏Code -> Optimize Imports
 ```
 
 

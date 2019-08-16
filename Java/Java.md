@@ -2,6 +2,8 @@
 
 ### 目录
 - [JVM的垃圾回收机制](JVM-GC.md)
+- [多线程](Multi-thread.md)
+    - [Disruptor](concurrent/LMAX-Disruptor.md)
 - [slf4j日志](#slf4j日志)
 - [JSON转换](#JSON转换)
 - [关键字](#Java关键字)

@@ -59,4 +59,14 @@
 
     Git – Revert
 
+### 其他小技巧
+
+自动清除无效import
+```text
+File -> Settings -> Editor -> General -> Auto Import 
+
+勾选动态优化导入（仅当前项目） Optimize imports on the fly(for current project)
+```
+
+
 [**返回首页目录**](README.md)

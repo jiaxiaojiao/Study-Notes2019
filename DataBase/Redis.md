@@ -125,4 +125,4 @@ Codis方案推出的时间比较长，而且国内很多互联网公司都已经
 	/usr/local/redis/bin/redis-cli shutdown
 	再次启动，查看集群信息（变成从节点）
 
-[**返回首页目录**](README.md)
+[**返回首页目录**](../README.md)

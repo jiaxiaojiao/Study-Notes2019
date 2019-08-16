@@ -16,6 +16,8 @@
 
 - **Dozer**
 
+    [https://dozermapper.github.io/]
+    
     使用以上（1和2）类库虽然可以不用手动编写get/set方法，但是他们都不能对不同名称的对象属性进行映射。在定制化的属性映射方面做得比较好的有Dozer，Dozer支持简单属性映射、复杂类型映射、双向映射、隐式映射以及递归映射。可使用xml或者注解进行映射的配置，支持自动类型转换，使用方便。但Dozer底层是使用reflect包下Field类的set(Object obj, Object value)方法进行属性赋值，执行速度上不是那么理想。
 
 - **Orika**

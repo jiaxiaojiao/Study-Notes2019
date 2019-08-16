@@ -91,7 +91,7 @@ Hibernate的数据库连接池就是将connection放进threadlocal实现的。
 
 线程池主要用来解决线程生命周期开销问题和资源不足问题。通过对多个任务重复使用线程，线程创建的开销就被分摊到了多个任务上了，而且由于在请求到达时线程已经存在，所以消除了线程创建所带来的延迟。这样，就可以立即为请求服务，使用应用程序响应更快。另外，通过适当的调整线程中的线程数目可以防止出现资源不足的情况。
 
-![Executor](images/Executor.png)
+![Executor](../images/Executor.png)
 
 接口：Executor,CompletionService,ExecutorService，ScheduledExecutorService
 
@@ -227,6 +227,13 @@ Disruptor是一个高性能的异步处理框架，或者可以认为是最快�
 **使用步骤：**
 
 引入Jar包。com.lmax.disruptor
+```text
+<dependency>
+  <groupId>com.lmax</groupId>
+  <artifactId>disruptor</artifactId>
+  <version>3.4.2</version>
+</dependency>
+```
 
 1.	建立一个Event类。
 
@@ -315,4 +322,4 @@ Quasar原理：
 ```
 
 
-[**返回首页目录**](README.md)
+[**返回首页目录**](../README.md)

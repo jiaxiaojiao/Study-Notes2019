@@ -1,5 +1,12 @@
 ## Java基础
 
+### 目录
+- [JVM的垃圾回收机制](JVM-GC.md)
+- [slf4j日志](#slf4j日志)
+- [JSON转换](#JSON转换)
+- [关键字](#Java关键字)
+
+
 ### slf4j日志
 
 打印多个参数的日志 logger.info("id:[{}], name:[{}]", id , name);
@@ -55,4 +62,4 @@ transient修饰符仅适用于变量，不适用于方法和类。
 在序列化时，如果我们不想序列化特定变量以满足安全约束，那么我们应该将该变量声明为transient。执行序列化时，JVM会忽略transient变量的原始值并将默认值保存到文件中。因此，transient意味着不要序列化。
 
 
-[**返回首页目录**](README.md)
+[**返回首页目录**](../README.md)

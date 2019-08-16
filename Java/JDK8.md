@@ -43,4 +43,4 @@ List<User> filterList = list.stream().filter(user -> user.getName().equals("XX")
 int sumAge = list.stream().mapToInt(User::getAge).sum();
 ```
 
-[**返回首页目录**](README.md)
+[**返回首页目录**](../README.md)

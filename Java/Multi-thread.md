@@ -188,7 +188,7 @@ shutdown()：不会立即终止线程池，而是要等所有任务缓存队列�
 
 shutdownNow()：立即终止线程池，并尝试打断正在执行的任务，并且清空任务缓存队列，返回尚未执行的任务
 
-### [并发框架 LMAX Disruptor](concurrent/LMAX-Disruptor.md)
+### [并发框架 LMAX Disruptor](Concurrent/LMAX-Disruptor.md)
 
 ### Java协程（quasar）
 

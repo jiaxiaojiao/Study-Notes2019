@@ -10,7 +10,7 @@
 - [Thymeleaf](Thymeleaf.md)  Java模板引擎
 
 持久层框架：
-- [MyBatis](MyBatis.md)
+- [MyBatis](MyBatis/MyBatis.md)
 - [Hibernate](Hibernate.md)
 
 分布式：

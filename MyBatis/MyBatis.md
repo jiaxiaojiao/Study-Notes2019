@@ -22,6 +22,6 @@ MyBatis是一个基于Java的持久层框架。包括SQL Maps和Data Access Obje
 
 ### MyBatis Generator代码自动生成工具
 
-逆向工程生成Mapper
+- [使用插件MyBatis Generator](Mybatis-Generator.md)
 
-[**返回首页目录**](README.md)
+[**返回首页目录**](../README.md)

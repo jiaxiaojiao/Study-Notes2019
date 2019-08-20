@@ -3,19 +3,19 @@
 > 工作和学习中遇到的一些问题和总结，希望能够慢慢的成长。
 
 
-### 一些概念@@
-- [可见性/原子性/有序性](Basic-Concept.md#可见性-原子性-有序性)
-- [序列化/反序列化](Basic-Concept.md#序列化-反序列化)
-- [高可用](Basic-Concept.md#高可用)
-- [高并发](Basic-Concept.md#高并发)
-- [分布式](Basic-Concept.md#分布式)
-- [微服务](Basic-Concept.md#微服务)
-- [集群](Basic-Concept.md#集群)
-- [缓存](Basic-Concept.md#缓存)
-- [JMS](Basic-Concept.md#JMS)
-- [BlockingQueue](Basic-Concept.md#BlockingQueue)
-- [OA系统](Basic-Concept.md#OA系统)
-- [BPM](Basic-Concept.md#BPM)
+### 一些概念
+[可见性/原子性/有序性](Basic-Concept.md#可见性-原子性-有序性)
+[序列化/反序列化](Basic-Concept.md#序列化-反序列化)
+[高可用](Basic-Concept.md#高可用)
+[高并发](Basic-Concept.md#高并发)
+[分布式](Basic-Concept.md#分布式)
+[微服务](Basic-Concept.md#微服务)
+[集群](Basic-Concept.md#集群)
+[缓存](Basic-Concept.md#缓存)
+[JMS](Basic-Concept.md#JMS)
+[BlockingQueue](Basic-Concept.md#BlockingQueue)
+[OA系统](Basic-Concept.md#OA系统)
+[BPM](Basic-Concept.md#BPM)
 
 ### [Java基础](Java/Index.md)
 - [多线程](Java/Multi-thread.md)

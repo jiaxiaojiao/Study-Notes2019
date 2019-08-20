@@ -3,7 +3,7 @@
 ## Tomcat是什么
 
 > 开源的 Java Web 应用服务器，实现了 Java EE(Java Platform Enterprise Edition)的部 分技术规范，比如 Java Servlet、Java Server Page、JSTL、Java WebSocket。Java EE 是 Sun 公 司为企业级应用推出的标准平台，定义了一系列用于企业级开发的技术规范，除了上述的之外，还有 EJB、Java Mail、JPA、JTA、JMS 等，而这些都依赖具体容器的实现。
-![image](images/tomcat-2-1.jpeg)
+![image](../images/tomcat-2-1.jpeg)
 
 上图对比了 Java EE 容器的实现情况，Tomcat 和 Jetty 都只提供了 Java Web 容器必需的 Servlet 和 JSP 规范，开发者要想实现其他的功能，需要自己依赖其他开源实现。
 
@@ -16,7 +16,7 @@ Glassfish 是由 sun 公司推出，Java EE 最新规范出来之后，首先会
 ### Tomcat 组成如下图：
 
 主要有 Container 和 Connector 以及相关组件构成。
-![image](images/tomcat-2-2.jpeg)
+![image](../images/tomcat-2-2.jpeg)
 
 - Server：指的就是整个 Tomcat 服 务器，包含多组服务，负责管理和 启动各个 Service，同时监听 8005 端口发过来的 shutdown 命令，用 于关闭整个容器 ；
 - Service：Tomcat 封装的、对外提 供完整的、基于组件的 web 服务， 包含 Connectors、Container 两个 核心组件，以及多个功能组件，各 个 Service 之间是独立的，但是共享 同一 JVM 的资源 ；
@@ -29,7 +29,7 @@ Glassfish 是由 sun 公司推出，Java EE 最新规范出来之后，首先会
 - Naming：命名服务，JNDI， Java 命名和目录接口，是一组在 Java 应用中访问命名和目录服务的 API。命名服务将名称和对象联系起来，使得我们可以用名称访问对象，目录服务也是一种命名 服务，对象不但有名称，还有属性。Tomcat 中可以使用 JNDI 定义数据源、配置信息，用于开发 与部署的分离。
 
 #### Container组成
-![image](images/tomcat-2-3.jpeg)
+![image](../images/tomcat-2-3.jpeg)
 
 - Engine：Servlet 的顶层容器，包含一 个或多个 Host 子容器；
 - Host：虚拟主机，负责 web 应用的部 署和 Context 的创建；
@@ -41,7 +41,7 @@ Glassfish 是由 sun 公司推出，Java EE 最新规范出来之后，首先会
 Tomcat 为了方便管理组件和容器的生命周期，定义了从创建、启动、到停止、销毁共 12 种状态，tomcat 生命周期管理了内部状态变化的规则控制，组件和容器只需实现相应的生命周期 方法即可完成各生命周期内的操作(initInternal、startInternal、stopInternal、 destroyInternal)；
 
 比如执行初始化操作时，会判断当前状态是否 New，如果不是则抛出生命周期异常；是的 话则设置当前状态为 Initializing，并执行 initInternal 方法，由子类实现，方法执行成功则设置当 前状态为 Initialized，执行失败则设置为 Failed 状态；
-![image](images/tomcat-2-4.jpeg)
+![image](../images/tomcat-2-4.jpeg)
 
 Tomcat 的生命周期管理引入了事件机制，在组件或容器的生命周期状态发生变化时会通 知事件监听器，监听器通过判断事件的类型来进行相应的操作。
 
@@ -51,11 +51,11 @@ Tomcat 各类容器的配置过程就是通过添加 listener 的方式来进行
 - EngineConfig：主要打印启动和停止日志
 - HostConfig：主要处理部署应用，解析应用 META-INF/context.xml 并创建应用的 Context 
 - ContextConfig：主要解析并合并 web.xml，扫描应用的各类 web 资源 (filter、servlet、listener)
-![image](images/tomcat-2-5.jpeg)
+![image](../images/tomcat-2-5.jpeg)
 
 ## Tomcat 的启动过程
 
-![image](images/tomcat-2-6.jpeg)
+![image](../images/tomcat-2-6.jpeg)
 
 启动从 Tomcat 提供的 start.sh 脚本开始，shell 脚本会调用 Bootstrap 的 main 方法，实际 调用了 Catalina 相应的 load、start 方法。
 
@@ -113,7 +113,7 @@ ContextConfig 解析 web.xml 顺序：
 - 容器的定期执行：backgroundProcess，由 ContainerBase 来实现的，并且只有在顶层容器 中才会开启线程。(backgroundProcessorDelay=10 标志位来控制)
 
 #### Servlet 生命周期
-![image](images/tomcat-2-7.jpeg)
+![image](../images/tomcat-2-7.jpeg)
 
 Servlet 是用 Java 编写的服务器端程序。其主要功能在于交互式地浏览和修改数据，生成动态 Web 内容。
 
@@ -134,7 +134,7 @@ single thread model
 最佳实践：不要使用该模型，servlet 中不要有全局变量
 
 #### 请求处理过程
-![image](images/tomcat-2-8.jpeg)
+![image](../images/tomcat-2-8.jpeg)
 
 1. 根据 server.xml 配置的指定的 connector 以及端口监听 http、或者 ajp 请求
 2. 请求到来时建立连接,解析请求参数,创建 Request 和 Response 对象,调用顶层容器 pipeline 的 invoke 方法
@@ -142,7 +142,7 @@ single thread model
 4. Connector 将 response 流中的数据写到 socket 中
 
 #### Pipeline 与 Valve
-![image](images/tomcat-2-9.jpeg)
+![image](../images/tomcat-2-9.jpeg)
 
 Pipeline 可以理解为现实中的管道,Valve 为管道中的阀门,Request 和 Response 对象在管道中 经过各个阀门的处理和控制。
 
@@ -153,7 +153,7 @@ Valve 中主要的三个方法:setNext、getNext、invoke;valve 之间的关系�
 各层容器对应的 basic valve 分别是 StandardEngineValve、StandardHostValve、 StandardContextValve、StandardWrapperValve。
 
 ## JSP引擎
-![image](images/tomcat-2-10.jpeg)
+![image](../images/tomcat-2-10.jpeg)
 
 #### JSP 生命周期
      
@@ -185,7 +185,7 @@ Valve 中主要的三个方法:setNext、getNext、invoke;valve 之间的关系�
  - JSP 行为:jsp:include、jsp:useBean、jsp:setProperty、jsp:getProperty、jsp:forward
  
 #### Jsp 解析过程
- ![image](images/tomcat-2-11.jpeg)
+ ![image](../images/tomcat-2-11.jpeg)
  
  - 代码片段:在_jspService()方法内直接输出
  - JSP 声明: 在 servlet 类中进行输出
@@ -197,26 +197,26 @@ Valve 中主要的三个方法:setNext、getNext、invoke;valve 之间的关系�
  - JSP 隐式对象:在_jspService()方法会进行声明,只能在方法中使用;
  
 ## Connector
- ![image](images/tomcat-2-12.jpeg)
+ ![image](../images/tomcat-2-12.jpeg)
  
  - Http:HTTP 是超文本传输协议,是客户端浏览器或其他程序与 Web 服务器之间的应用层通信协 议
  - AJP:Apache JServ 协议(AJP)是一种二进制协议,专门代理从 Web 服务器到位于后端的应用 程序服务器的入站请求
  
 #### 阻塞 IO
- ![image](images/tomcat-2-13.jpeg)
+ ![image](../images/tomcat-2-13.jpeg)
  
 #### 非阻塞 IO
- ![image](images/tomcat-2-14.jpeg)
+ ![image](../images/tomcat-2-14.jpeg)
  
 #### IO多路复用
- ![image](images/tomcat-2-15.jpeg)
+ ![image](../images/tomcat-2-15.jpeg)
  
  阻塞与非阻塞的区别在于进行读操作和写操作的系统调用时，如果此时内核态没有数据可读或者没有缓冲空间可写时，是否阻塞。
  
  IO多路复用的好处在于可同时监听多个socket的可读和可写事件，这样就能使得应用可以同时监听多个socket，释放了应用线程资源。
  
 #### Tomcat各类Connector对比
- ![image](images/tomcat-2-16.jpeg)
+ ![image](../images/tomcat-2-16.jpeg)
  
  Connector的实现模式有三种，分别是BIO、NIO、APR，可以在server.xml中指定。
  
@@ -235,7 +235,7 @@ Valve 中主要的三个方法:setNext、getNext、invoke;valve 之间的关系�
  - Write Response：跟读取request body的逻辑类似，同样需要阻塞写
  
 #### NIO处理相关类
- ![image](images/tomcat-2-17.jpeg)
+ ![image](../images/tomcat-2-17.jpeg)
  
  - Acceptor线程负责接收连接，调用accept方法阻塞接收建立的连接，并对socket进行封装成PollerEvent，指定注册的事件为op_read，并放入到EventQueue队列中，PollerEvent的run方法逻辑的是将Selector注册到socket的指定事件；
  - Poller线程从EventQueue获取PollerEvent，并执行PollerEvent的run方法，调用Selector的select方法，如果有可读的Socket则创建Http11NioProcessor，放入到线程池中执行；
@@ -243,7 +243,7 @@ Valve 中主要的三个方法:setNext、getNext、invoke;valve 之间的关系�
  - Mapper主要处理http url 到servlet的映射规则的解析，对外提供map方法
  
 #### NIO Connector主要参数
- ![image](images/tomcat-2-18.jpeg)     
+ ![image](../images/tomcat-2-18.jpeg)     
 
 ## Comet
 
@@ -252,7 +252,7 @@ Comet是一种用于web的推送技术，能使服务器实时地将更新的信
 在WebSocket出来之前，如果不适用comet，只能通过浏览器端轮询Server来模拟实现服务器端推送。
 
 Comet支持servlet异步处理IO，当连接上数据可读时触发事件，并异步写数据(阻塞)
-![image](images/tomcat-2-19.jpeg)
+![image](../images/tomcat-2-19.jpeg)
 
 Tomcat要实现Comet，只需继承HttpServlet同时，实现CometProcessor接口
 
@@ -269,14 +269,14 @@ Note：
 - Note：在事件触发时要做好线程安全的操作
 
 ## 异步Servlet
-![image](images/tomcat-2-20.jpeg)
+![image](../images/tomcat-2-20.jpeg)
 
 传统流程：
 - 首先，Servlet 接收到请求之后，request数据解析；
 - 接着，调用业务接口的某些方法，以完成业务处理；
 - 最后，根据处理的结果提交响应，Servlet 线程结束。
 
-![image](images/tomcat-2-21.jpeg)
+![image](../images/tomcat-2-21.jpeg)
 异步处理流程：
 - 客户端发送一个请求
 - Servlet容器分配一个线程来处理容器中的一个servlet

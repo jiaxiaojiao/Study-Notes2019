@@ -2,7 +2,7 @@
 
 ## 一、Tomcat顶层架构
 先上一张Tomcat的顶层结构图（图A），如下：
-![image](images/tomcat-1-1.png)
+![image](../images/tomcat-1-1.png)
 
 
 Tomcat中最顶层的容器是Server，代表着整个服务器，从上图中可以看出，一个Server可以包含至少一个Service，用于具体提供服务。
@@ -15,18 +15,18 @@ Service主要包含两个部分：Connector和Container。从上图中可以看�
 ```
 
 一个Tomcat中只有一个Server，一个Server可以包含多个Service，一个Service只有一个Container，但是可以有多个Connectors，这是因为一个服务可以有多个连接，如同时提供Http和Https链接，也可以提供向相同协议不同端口的连接,示意图如下（Engine、Host、Context下边会说到）：
-![image](images/tomcat-1-2.png)
+![image](../images/tomcat-1-2.png)
 
 多个 Connector 和一个 Container 就形成了一个 Service，有了 Service 就可以对外提供服务了，但是 Service 还要一个生存的环境，必须要有人能够给她生命、掌握其生死大权，那就非 Server 莫属了！所以整个 Tomcat 的生命周期由 Server 控制。
 
 另外，上述的包含关系或者说是父子关系，都可以在tomcat的conf目录下的server.xml配置文件中看出，下图是删除了注释内容之后的一个完整的server.xml配置文件（Tomcat版本为8.0）
-![image](images/tomcat-1-3.png)
+![image](../images/tomcat-1-3.png)
 
 
 详细的配置文件文件内容可以到Tomcat官网查看：http://tomcat.apache.org/tomcat-8.0-doc/index.html
 
 上边的配置文件，还可以通过下边的一张结构图更清楚的理解：
-![image](images/tomcat-1-4.png)
+![image](../images/tomcat-1-4.png)
 
 Server标签设置的端口号为8005，shutdown=”SHUTDOWN” ，表示在8005端口监听“SHUTDOWN”命令，如果接收到了就会关闭Tomcat。一个Server有一个Service，当然还可以进行配置，一个Service有多个，Service左边的内容都属于Container的，Service下边是Connector。
 
@@ -58,7 +58,7 @@ Connector用于接受请求并将请求封装成Request和Response，然后交�
 - （4）Container处理完之后如何交给Connector并返回给客户端的？
 
 首先看一下Connector的结构图（图B），如下所示：
-![image](images/tomcat-1-5.png)
+![image](../images/tomcat-1-5.png)
 
 Connector就是使用ProtocolHandler来处理请求的，不同的ProtocolHandler代表不同的连接类型，比如：Http11Protocol使用的是普通Socket来连接的，Http11NioProtocol使用的是NioSocket来连接的。
 
@@ -74,7 +74,7 @@ Connector就是使用ProtocolHandler来处理请求的，不同的ProtocolHandle
 
 ## 五、Container架构分析
 Container用于封装和管理Servlet，以及具体处理Request请求，在Connector内部包含了4个子容器，结构图如下（图C）：
-![image](images/tomcat-1-6.png)
+![image](../images/tomcat-1-6.png)
 
 4个子容器的作用分别是：
 
@@ -84,7 +84,7 @@ Container用于封装和管理Servlet，以及具体处理Request请求，在Con
 - （4）Wrapper：每一Wrapper封装着一个Servlet；
 
 下面找一个Tomcat的文件目录对照一下，如下图所示：
-![image](images/tomcat-1-7.png)
+![image](../images/tomcat-1-7.png)
 
 Context和Host的区别是Context表示一个应用，我们的Tomcat中默认的配置下webapps下的每一个文件夹目录都是一个Context，其中ROOT目录中存放着主应用，其他目录存放着子应用，而整个webapps就是一个Host站点。
 
@@ -96,7 +96,7 @@ Context和Host的区别是Context表示一个应用，我们的Tomcat中默认�
 Container处理请求是使用Pipeline-Valve管道来处理的！（Valve是阀门之意）
 
 Pipeline-Valve是责任链模式，责任链模式是指在一个请求处理的过程中有很多处理者依次对请求进行处理，每个处理者负责做自己相应的处理，处理完之后将处理后的请求返回，再让下一个处理着继续处理。
-![image](images/tomcat-1-8.png)
+![image](../images/tomcat-1-8.png)
 
 但是！Pipeline-Valve使用的责任链模式和普通的责任链模式有些不同！区别主要有以下两点：
 
@@ -107,7 +107,7 @@ Pipeline-Valve是责任链模式，责任链模式是指在一个请求处理的
 我们知道Container包含四个子容器，而这四个子容器对应的BaseValve分别在：StandardEngineValve、StandardHostValve、StandardContextValve、StandardWrapperValve。
 
 Pipeline的处理流程图如下（图D）：
-![image](images/tomcat-1-9.png)
+![image](../images/tomcat-1-9.png)
 
 - （1）Connector在接收到请求后会首先调用最顶层容器的Pipeline来处理，这里的最顶层容器的Pipeline就是EnginePipeline（Engine的管道）；
 

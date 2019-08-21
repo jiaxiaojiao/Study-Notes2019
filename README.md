@@ -18,29 +18,34 @@
 [BPM](Basic-Concept.md#BPM)
 
 ### [Java基础](Java/Index.md)
+- [JDK8新特性](Java/JDK8.md)
 - [多线程](Java/Multi-thread.md)
 - [REST](Java/RESTful-API.md)  API设计理论
 
 
 ### 框架
 - [Spring](Framework/Spring/Index.md)
+    - Spring MVC
+    - Spring Boot
     - Spring Cloud
+    - Spring Data
 - Struts
-- [MyBatis](Framework/MyBatis/MyBatis.md) 持久层框架，定制化SQL
+- [MyBatis](Framework/MyBatis/Index.md) 持久层框架，定制化SQL
     - 源码
     - 缓存(一级缓存，二级缓存)
     - 插件原理
-- [Hibernate](Others/Hibernate.md) 持久层框架开源
+- Hibernate 持久层框架开源
+- [Activiti](Workflow/Index.md)  业务流程管理
 
 
 ### 分布式
 - 集群管理
-- [Zookeeper](Others/Zookeeper.md)  分布式协调服务
+- Zookeeper 分布式协调服务
     - 常用接口
     - Watch机制
 - Dubbo 分布式服务
-- [R2M](Others/R2M.md)  分布式缓存系统
-- [Hadoop](Others/Hadoop.md)  分布式系统基础架构
+- R2M  分布式缓存系统
+- Hadoop  分布式系统基础架构
 
 
 ### 消息中间件
@@ -48,21 +53,21 @@
 
 
 ### 服务器
-- [Tomcat](Tomcat/Index.md)  Web应用服务器，免费，开源
-- [Nginx](Others/Nginx.md)  HTTP服务器，代理服务器
+- [Tomcat](Apache/Tomcat.md)  Web应用服务器，免费，开源
+- Nginx HTTP服务器，代理服务器
 - Apache
-- [Jenkins](Others/Jenkins.md) 自动化部署
+- Jenkins 自动化部署
 
 
 ### 项目管理
 - Maven
-- [Git](Others/Git.md) 分布式版本控制系统
+- Git 分布式版本控制系统
 - Gradle
 
 
-### Java IDE
+### IDE
 - [Intellij IDEA](IDE/IDEA.md)  Java开发集成环境。
-- Eclipse
+- [Eclipse](IDE/Eclipse.md)
 - NetBeans
 
 
@@ -91,8 +96,8 @@
 ### 网络与通信
 - 网络设备
 - 网络协议
-    - TCP
-    - HTTP
+    - [TCP](Network/TCP.md) 三次握手 四次挥手  
+    - [HTTP](Network/HTTP.md)
     - HTTPS
 - 网络安全
 - 通信框架
@@ -105,7 +110,7 @@
 - 进程与线程
 - 内存管理
 - 常见系统
-    - Linux
+    - [Linux](Linux.md)
         - 常用命令
 
 
@@ -113,7 +118,7 @@
 - 线性表与数组
     - 链表
     - 栈、队列
-    - [布隆过滤器](Others/Bloom-Filter.md)
+    - 布隆过滤器
 - 二叉树
 - 图
     - 有向图
@@ -125,8 +130,8 @@
 
 
 ### 软件工程与设计模式
-- 软件工程与UML
-- [设计模式](Others/Design-Patterns.md)
+- [软件工程与UML](Software-Engineering.md)
+- 设计模式
 
 
 ### 编译原理
@@ -136,9 +141,7 @@
 
 
 ### 其他
-- 工作流
-    - JBPM
-    - [Activiti](Workflow/Activiti.md)  业务流程管理
+
 - [程序开发语言](Others/Language.md)
     - [Groovy](Others/Groovy.md) 基于JVM的敏捷开发语言
     - XML
@@ -148,7 +151,6 @@
 - [解决Hash碰撞冲突的方法](Others/Hash.md)
 - [ELK](Others/ELK.md) 日志系统
 - [Thymeleaf](Others/Thymeleaf.md)  Java模板引擎
-- apache commons
 - Guava
 - [其他工具](Others/Tools-Other.md)
 

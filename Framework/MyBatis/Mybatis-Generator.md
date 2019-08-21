@@ -122,7 +122,7 @@ MyBatis Generator是一个用于自动生成dao层接口、pojo以及mapper xml�
 
 3. 完成以上配置之后，点击右边的Maven Projects窗口，双击插件进行运行
 
-![image](images/mybatis-generator-1.png)
+![image](../../images/mybatis-generator-1.png)
 
 
 ### 配置文件

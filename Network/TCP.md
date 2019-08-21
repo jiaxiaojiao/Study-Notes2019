@@ -2,7 +2,7 @@
 
 ## 三次握手建立连接
 
-![image](images/TCP-1.png)
+![image](../images/TCP-1.png)
 
 TCP协议，提供面向连接的可靠数据传输服务，采用三次握手过程建立连接。
 
@@ -14,7 +14,7 @@ TCP协议，提供面向连接的可靠数据传输服务，采用三次握手�
 
 ## 四次挥手断开连接
 
-![image](images/TCP-2.png)
+![image](../images/TCP-2.png)
 
 TCP协议断开连接的四次挥手过程。
 

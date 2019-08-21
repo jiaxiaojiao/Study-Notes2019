@@ -20,7 +20,7 @@ MySQL是一个关系型数据库管理系统，开发源码。
 
 MySQL Document Store architecture （来自官网）
 
-![MySQL Document Store architecture](images/MySQL-Document-Store-architecture.png)
+![MySQL Document Store architecture](../images/MySQL-Document-Store-architecture.png)
 
 ### 优化InnoDB查询（在每个表上创建合适的索引）（来自官网）
 
@@ -36,15 +36,15 @@ MySQL Document Store architecture （来自官网）
 
 - 命令行模式登录MySQL
 
-![MySQL-Version](images/MySQL-Version-1.png)
+![MySQL-Version](../images/MySQL-Version-1.png)
 
 - 命令行下使用status
 
-![MySQL-Version](images/MySQL-Version-2.png)
+![MySQL-Version](../images/MySQL-Version-2.png)
 
 - 使用系统函数
 
-![MySQL-Version](images/MySQL-Version-3.png)
+![MySQL-Version](../images/MySQL-Version-3.png)
 
 ### SQL 
 

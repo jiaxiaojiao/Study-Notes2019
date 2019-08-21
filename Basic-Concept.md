@@ -13,6 +13,7 @@
 - [BlockingQueue](#BlockingQueue)
 - [OA系统](#OA系统)
 - [BPM](#BPM)
+- [IDE](#IDE)
 
 ### 可见性 原子性 有序性
 
@@ -213,5 +214,9 @@ Office Automation System
 Business Process Management
 
 业务流程管理
+
+### IDE
+
+Integrated Development Environment 集成开发环境
 
 [**返回首页目录**](README.md)

@@ -3,6 +3,7 @@
 ### 目录
 - [快捷键 For Windows](IDEA-shortcut-ForWindows.md)
 - [快捷键 For Mac](IDEA-shortcut-ForMac.md)
+- [tomcat启动控制台乱码](IDEA-Tomcat-1.md)
 
 ### 常用快捷键
 

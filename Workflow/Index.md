@@ -1,17 +1,17 @@
-# 工作流引擎
+## 工作流
 
-- [jBPM](jBPM.md)
+### 目录
+- [工作流引擎](#工作流引擎)
+- 常见的工作流系统
+    - [jBPM](jBPM.md)
+    - [Activiti](Activiti.md)
+    - [SWF](SWF.md)
+- [工作流系统对比](#工作流系统对比)
 
-- [Activiti](Activiti.md)
-
-- [SWF](SWF.md)
-
-## 概念
-
-#### 工作流：
 业务过程的部分或整体在计算机应用环境下的自动化，它主要解决的是“使在多个参与者之间按照某种预定义的规则传递文档、信息或任务的过程自动化”，从而实现某个预期的业务目标，或者促使此目标的实现。
 
-#### 工作流引擎：
+### 工作流引擎
+
 编写好流程定义（Process Defintion）文件以及相关的Java类后，就可以部署到引擎中，每一次执行称为一个流程实例（Process Instance）。
 
 1. 流程定义： 使用XML编写的用于描述流程的文件
@@ -31,31 +31,23 @@
     
       
 
-#### jPDL：
-  java process Definition Language
+#### jPDL
 
-  采用xml进行描述流程规则。
-
-  jBPM提供了GPD图形化的方式生成jpdl的eclipse插件。
+java process Definition Language
+- 采用xml进行描述流程规则。
+- jBPM提供了GPD图形化的方式生成jpdl的eclipse插件。
+- jBPM5之前版本用的是jPDL
   
-  jBPM5之前版本用的是jPDL
+#### BMPN
   
-#### BMPN：
+- 采用xml进行描述流程规则。
+- 有可视化设计器支持。
+- 现在都用BMPN描述工作流程。行业的标准。  
   
-  采用xml进行描述流程规则。
-  
-  有可视化设计器支持。
-  
-  现在都用BMPN描述工作流程。行业的标准。  
-  
-## 工作流引擎对比  
-
+### 工作流系统对比
 - jBPM3 是一个完整的工作流系统实现，面向开发人员，目的在于简化对组织核心流程进行支撑的软件创建，不支持标准。
-
 - jBPM4 引入 PVM，使其拥有更强大的扩展性，同时增加 BPMS 特性，这些特性包括了对 BPMN 的支持、面向业务人员的 Web 建模器和简单统计分析功能的加入。
-
 - jBPM5 基于原先的 Drools Flow，支持 BPMN，通过与 Drools 的合并支持 BAM，通过内容仓库增加对流程可视化的支持。由于放弃了 jBPM4 的 PVM，引擎的可扩展性受到损害，并且不再支持 jPDL。
-
 - Activiti5 基于 jBPM4，与 Alfresco 的集成增加了其流程可视化与管理能力，同时通过创新的 Activiti Cycle 协作组件支持流程相关人员之间的协调，最后，它加强了集成能力。
 
-  对于工作流应用或者 jBPM3、jBPM4 的老用户，建议转向 Activiti5。
+对于工作流应用或者 jBPM3、jBPM4 的老用户，建议转向 Activiti5。

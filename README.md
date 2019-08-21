@@ -142,18 +142,19 @@
 
 ### 其他
 
-- [程序开发语言](Others/Language.md)
-    - [Groovy](Others/Groovy.md) 基于JVM的敏捷开发语言
+- [程序开发语言](Language.md)
+    - [Groovy](Groovy.md) 基于JVM的敏捷开发语言
     - XML
     - JSON
-- [软件开发流程](Others/Software-development-process.md)
-- [编码与加解密](Others/Cryptography.md)
-- [解决Hash碰撞冲突的方法](Others/Hash.md)
-- [ELK](Others/ELK.md) 日志系统
-- [Thymeleaf](Others/Thymeleaf.md)  Java模板引擎
+- [软件开发流程](Software-development-process.md)
+- [编码与加解密](Cryptography.md)
+- [解决Hash碰撞冲突的方法](Hash.md)
+- [ELK](ELK.md) 日志系统
+- [Thymeleaf](Java/Thymeleaf.md)  Java模板引擎
 - Guava
 - [其他工具](Others/Tools-Other.md)
-
+- 安全
 
 ---
 
+> 项目经理、软件工程师、研究员、安全架构师、信息安全

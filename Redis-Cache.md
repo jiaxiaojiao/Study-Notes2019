@@ -12,7 +12,7 @@
 - 事中：本地ehcache缓存 + hystrix限流&降级，避免MySQL崩掉
 - 事后：利用 redis 持久化机制保存的数据尽快恢复缓存
 
-![image](Others/images/Redis-Cache-1.jpg)
+![image](未整理/images/Redis-Cache-1.jpg)
 
 
 **缓存穿透** 

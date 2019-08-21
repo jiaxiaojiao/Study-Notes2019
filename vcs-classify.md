@@ -29,7 +29,7 @@
 
 - 中央服务器在没有备份的情况下，磁盘一旦被损坏，将丢失所有数据
 
-#### ![集中式](Others/images/CentralizedVersionControl.png)
+#### ![集中式](未整理/images/CentralizedVersionControl.png)
 
 #### 分布式特点：
 
@@ -53,7 +53,7 @@
 
 - 不容易上手
 
-#### ![分布式](Others/images/DistributedVersionControl.png)
+#### ![分布式](未整理/images/DistributedVersionControl.png)
 
 
 

@@ -75,9 +75,9 @@
 
 ## 软件
 
-- [confluence](/confluence.md)  是一个专业的企业知识管理和协同软件。也可以构建企业wiki。
+- [confluence](/Confluence.md)  是一个专业的企业知识管理和协同软件。也可以构建企业wiki。
 
-- [CHM Editor](/chmeditor.md)  CHM编辑器
+- [CHM Editor](/CHM.md)  CHM编辑器
 
 
 ## [收藏的网站](/website.md)

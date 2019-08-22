@@ -1,17 +1,21 @@
-# confluence 团队协作软件
+## confluence 团队协作软件
 
+![image](images/Confluence-blue.svg)
+网站： https://www.atlassian.com/software/confluence
 
-- [confluence官网](https://www.atlassian.com/software/confluence)
-- [confluence下载地址](https://www.atlassian.com/software/confluence/download-archives)
-- [confluence演示空间-学习教程](http://www.confluence.cn/pages/viewpage.action?pageId=360473)
-```text
-Create, collaborate, and keep all your work in one place
+下载地址： https://www.atlassian.com/software/confluence/download-archives
 
-Unlike document and file-sharing tools, Confluence is open and accessible, helping your 
-team, and your company do their best work together
+学习教程： http://www.confluence.cn/pages/viewpage.action?pageId=360473
 
-```
-### 用途:
+> Create, collaborate, and keep all your work in one place
+>
+> Unlike document and file-sharing tools, Confluence is open and accessible, helping your team, and your company do their best work together
+
+### 目录
+- [用途](#用途)
+- [学习使用](#学习使用)
+
+### 用途
 - 技术博客
 - 发送文章
 - 评论，点赞
@@ -23,7 +27,7 @@ team, and your company do their best work together
     - **欢迎信息** Confluence管理员能够使用管理控制台定制欢迎信息
     - **空间、页面、网络** 显示最喜欢的内容和人的选项卡
     - **最近的活动** 显示所有空间中最近更新内容的选项卡
-2.  菜单 ![image](./images/CONF40-Screen_Overview.png)
+2.  菜单 ![image](images/CONF40-Screen_Overview.png)
     
     菜单 | 说明
     ---|---
@@ -40,5 +44,3 @@ team, and your company do their best work together
     Add a Comment（添加一条评论） | 在文本框中点击，开始写一条评论。（或按“M”）
 
 
-
-![image](./images/Confluence-blue.svg)

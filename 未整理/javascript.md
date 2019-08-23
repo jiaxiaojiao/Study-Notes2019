@@ -36,4 +36,4 @@
 
 - [ECharts](../JavaScript/Echarts.md) 使用 JavaScript 实现的开源可视化库
 
-- [JSTL标签](../jstl.md)
+- [JSTL标签](jstl.md)

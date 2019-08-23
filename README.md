@@ -2,7 +2,6 @@
 
 > 工作和学习中遇到的一些问题和总结，希望能够慢慢的成长。
 
-
 ### 一些概念
 [可见性/原子性/有序性](Basic-Concept.md#可见性-原子性-有序性)
 [序列化/反序列化](Basic-Concept.md#序列化-反序列化)
@@ -111,7 +110,7 @@
 - 进程与线程
 - 内存管理
 - 常见系统
-    - [Linux](Linux.md)
+    - [Linux](System/Linux.md)
         - 常用命令
 
 
@@ -133,7 +132,7 @@
 
 
 ### 软件工程与设计模式
-- [软件工程与UML](Software-Engineering.md)
+- [软件工程与UML](未整理/Software-Engineering.md)
 - 设计模式
 
 
@@ -146,12 +145,12 @@
 ### 其他
 
 - [程序开发语言](Language/Language.md)
-    - [Groovy](Groovy.md) 基于JVM的敏捷开发语言
+    - [Groovy](未整理/Groovy.md) 基于JVM的敏捷开发语言
     - XML
     - JSON
-- [软件开发流程](Software-development-process.md)
-- [编码与加解密](Cryptography.md)
-- [解决Hash碰撞冲突的方法](Hash.md)
+- [软件开发流程](未整理/Software-development-process.md)
+- [编码与加解密](未整理/Cryptography.md)
+- [解决Hash碰撞冲突的方法](未整理/Hash.md)
 - [ELK](System/ELK.md) 日志系统
 - [Thymeleaf](Java/Thymeleaf.md)  Java模板引擎
 - Guava

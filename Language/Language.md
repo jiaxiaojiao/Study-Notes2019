@@ -6,7 +6,7 @@
 - [其他](#其他)
 - [移动](#移动)
 - [脚本语言](#脚本语言)
-- [专业工具](#专业工具)
+- [专业工具](#专业工具)****
 
 ### 范式
 
@@ -22,9 +22,9 @@
 
     - 结构化： 
         
-        - 面向对象 ： Visual Basic ,  Objective-C ,  Small talk ,  Python ,  Ruby ,  Eiffel ,  Java ,  C++ ,  C# 
+        - 面向对象 ： Visual Basic ,  Objective-C ,  Small talk ,  Python ,  Ruby ,  Eiffel ,  [Java](../Java/Index.md) ,  C++ ,  C# 
         
-        - 过程式： Delphi/Object Pascal ,  Fortran ,  BASIC ,  Pascal ,  GO ,  C 
+        - 过程式： Delphi/Object Pascal ,  Fortran ,  BASIC ,  Pascal ,  [GO](GO.md) ,  C 
         
         - 原型 ： IO
     
@@ -74,7 +74,7 @@ ECMAScript派生: Dart , JScript , JavaScript , ActionScript , CoffeeScript
 
 - 数据库 ： LINQ , T-SQL , XQuery , PL/SQL , Visual FoxPro
 
-- 样式格式描述 ： XSL , CSS
+- 样式格式描述 ： XSL , [CSS](../JavaScript/CSS.md)
 
 - 工业与辅助设计 ： AutoCAD
 

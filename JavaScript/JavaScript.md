@@ -1,6 +1,10 @@
-# JavaScript 
+## JavaScript 
 
-## JS获取元素节点的方法
+### 目录
+- [JS获取元素节点的方法](#JS获取元素节点的方法)
+
+
+### JS获取元素节点的方法
 
 - JS通过document节点获取
     - document.getElementById("id");

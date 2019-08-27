@@ -29,7 +29,7 @@
     - Spring Cloud
     - Spring Data
 - Struts
-- [MyBatis](Framework/MyBatis/Index.md) 持久层框架，定制化SQL
+- [MyBatis](Framework/MyBatis/MyBatis.md) 持久层框架，定制化SQL
     - 源码
     - 缓存(一级缓存，二级缓存)
     - 插件原理

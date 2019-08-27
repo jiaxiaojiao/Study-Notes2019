@@ -44,6 +44,7 @@
 - junit 单元测试框架
 - log4j 日志
 - Lombok
+- [循环](#循环)
 - [JSON转换](#JSON转换)
 - [关键字](#Java关键字)
     - volatile使用场景
@@ -54,7 +55,76 @@
 
 打印多个参数的日志 logger.info("id:[{}], name:[{}]", id , name);
 
+### 循环
+
+Java中主要有三种循环结构：
+- while 循环
+- do...while 循环
+- for 循环
+    - Java5中引入了一种瑶瑶用于数组的增强for循环
+
+#### while 循环
+
+```text
+while(布尔表达式){
+    循环内容
+}
+```
+
+只要布尔表达式为true循环体就会一直执行下去。
+
+#### do...while 循环
+
+do…while循环和while循环相同，不同的是， 
+do…while循环至少会执行一次。
+
+
+break关键字：
+- break主要用在循环语句或者switch语句中，用来跳出整个语句块。
+- break跳出最里面的循环，并且继续执行该循环下面的语句。
+
+continue 关键字：
+- continue 适用于任何循环控制结构中。作用是让程序立刻跳到下一次循环的迭代。
+- 在for循环中，continue语句使程序立即跳转到更新语句。
+- 在while或者do...while循环中，程序立即跳转到布尔表达式的判断语句。
+
+#### for 循环
+
+- 传统方式
+
+```text
+//建立一个数组
+int[] integers={1,2,3,4};
+//开始遍历
+for(int j=0;j<integers.length;j++){
+    int i=integers[j];
+    System.out.println(i);
+}
+```
+
+- 迭代遍历
+
+```text
+//建立一个Collection对象
+String[] strings ={"A","B","C","D"};
+Collection stringList=java.util.Arrays.asList(strings);
+//开始遍历
+for(iterator itr=stringList.iterator();itr.hasNext();){
+    Object str = itr.next();
+    System.out.println(str);
+}
+```
+
+- 增强for循环
+
+```text
+for（变量类型 变量:数组或者Collection集合）{
+    循环体;
+}
+```
+
 ### JSON转换
+
 ```text
 com.alibaba.fastjson.JSON
 // List 转 JSON
@@ -63,6 +133,7 @@ String str = JSON.toJSONString(list);
 List<User> list = JSON.parseObject(str, new TypeReference<List<User>>(){});
 List<User> list = JSON.parseArray(str, User.class);
 ```
+
 ### Java关键字
 
 **volatile**

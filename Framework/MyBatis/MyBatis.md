@@ -45,6 +45,6 @@ MyBatis是一个基于Java的持久层框架。包括SQL Maps和Data Access Obje
 - keyProperty：设置为POJO对象的主键id属性名称。
 - keyColumn：设置为数据库记录的主键id字段名称。
 
-其次，新添加主键id并不是在执行添加操作时直接返回的，而是在执行添加操作之后将新添加记录的主键id字段设置为POJO对象的主键id属性。通过访问POJO对象的主键id属性即可返回。
+新添加主键id并不是在执行添加操作时直接返回的，而是在执行添加操作之后将新添加记录的主键id字段设置为POJO对象的主键id属性。通过访问POJO对象的主键id属性即可返回。
 
 [**返回首页目录**](../../README.md)

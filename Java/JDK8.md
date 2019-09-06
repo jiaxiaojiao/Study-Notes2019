@@ -1,5 +1,21 @@
 ## JDK8特性
 
+> jdk1.8的一些新特性主要还是简化了代码的写法，减少了部分开发量。
+
+### 目录
+- [红黑树](#红黑树)
+- [Stream 流处理](#Stream-流处理)
+- [Lambda表达式](#Lambda表达式)
+- [接口的默认方法与静态方法](#接口的默认方法与静态方法)
+- [函数式接口](#函数式接口)
+- [方法与构造函数的引用](#方法与构造函数的引用)
+- [Date Time API](#Date-Time-API)
+- [Optional](#Optional)
+
+### 红黑树
+
+对HashMap等Map集合的数据结构优化。
+
 ### Stream 流处理
 
 - toList  把流中所有元素收集到List中
@@ -17,30 +33,46 @@
 - partitioningBy  根据流中每个元素应用谓语的结果来对项目进行分区
 
 ### Lambda表达式
+- Lambda 表达式处理List
 
-```text
-// 从List中获取一个属性集合：
-List<Long> ids = userList.stream().map(user -> user.getId()).collect(Collectors.toList());
+### 接口的默认方法与静态方法
 
-List<A> 转成 List<B>：
-// List<A> aList = ...;
-List<B> bList = aList.stream().map(a ->{
-// 在此转把A转换为B
-    return new B();
-}).collect(Collectors.toList());
+### 函数式接口
 
-List<User> list ...;
-// 遍历
-list.stream().forEach(user -> {});
-// List转为Map
-Map<Long, User> map = list.stream().collect(Collectors.toMap(User::getId, a -> a,(k1, k2) -> k1));
-Map<Long, User> map = list.stream().collect(Collectors.toMap(User::getId,user -> user));
-// List分组
-Map<String, List<User>> map = list.stream().collect(Collectors.groupingBy(User::getName));
-// 过滤
-List<User> filterList = list.stream().filter(user -> user.getName().equals("XX")).collect(Collectors.toList());
-// 求和
-int sumAge = list.stream().mapToInt(User::getAge).sum();
-```
+“函数式接口”是指仅仅只包含一个抽象方法的接口，每一个该类型的lambda表达式都会被匹配到这个抽象方法。
 
-[**返回首页目录**](../README.md)
+jdk1.8提供了一个@FunctionalInterface注解来定义函数式接口。
+
+函数式接口可以对现有的函数友好地支持 lambda。
+
+JDK 1.8 之前已有的函数式接口:
+- java.lang.Runnable
+- java.util.concurrent.Callable
+- java.security.PrivilegedAction
+- java.util.Comparator
+- java.io.FileFilter
+- java.nio.file.PathMatcher
+- java.lang.reflect.InvocationHandler
+- java.beans.PropertyChangeListener
+- java.awt.event.ActionListener
+- javax.swing.event.ChangeListener
+
+JDK 1.8 新增加的函数接口：
+- java.util.function
+
+### 方法与构造函数的引用
+
+### Date Time API
+
+加强了对时间和日期的处理。
+
+Java 8 在 java.time 包下提供了很多新的 API。以下为两个比较重要的 API：
+- Local(本地) − 简化了日期时间的处理。
+- Zoned(时区) − 通过制定的时区处理日期时间。
+
+常用的类：
+- LocalDate为日期处理类
+- LocalTime为时间处理类
+- LocalDateTime为日期时间处理类
+
+### Optional 

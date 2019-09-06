@@ -63,7 +63,7 @@ list.forEach( str -> {
 ```
 
 ```text
-Collections.sort(names, (a, b) -> b.compareTo(a));
+Collections.sofilterrt(names, (a, b) -> b.compareTo(a));
 ```
 
 总结：

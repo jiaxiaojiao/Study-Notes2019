@@ -78,7 +78,10 @@
 
 ### 测试
 - [Apache JMeter 压力测试工具](Apache/JMeter.md)
+- [SoapUI](https://www.soapui.org/)
+    - SoapUI是一个开源测试工具,通过soap/http来检查、调用、实现Web Service的功能/负载/符合性测试。
 - [Postman](https://www.getpostman.com/)
+- [fiddler]()
 
 
 ### [数据库](DataBase/Index.md)

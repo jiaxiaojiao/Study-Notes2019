@@ -4,6 +4,7 @@
 
 ### 目录
 
+
 -- 未完...
 
 Git配置
@@ -49,9 +50,10 @@ Git配置
 
 版本回退
 
-    $ git reset --hard HEAD^
+    $ git reset --hard HEAD^         回退到上个版本
+    $ git reset --hard HEAD~3        回退到前3次提交之前，以此类推，回退到n次提交之前
 
-回退指定版本号
+回退到/进到指定commit的sha码
 
     $ git reset --hard commit_id
 

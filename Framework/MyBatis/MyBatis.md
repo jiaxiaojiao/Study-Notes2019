@@ -6,6 +6,8 @@
 ### 目录
 - [描述](#描述)
 - [动态SQL](#动态SQL)
+    - [Mapper中传入参数parameterType类型](MyBatis-parameterType.md)
+    - [自定义SQL参数化-map的扩展](MyBatis-parameterType.md#自定义SQL参数化)
 - [缓存](#缓存)
 - [插件开发](#插件开发)
 - [Spring 集成MyBatis](#Spring-集成MyBatis)

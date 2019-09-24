@@ -2,6 +2,7 @@
 
 > 持久层框架。	
 
+中文文档： https://mybatis.org/mybatis-3/zh/index.html 
 
 ### 目录
 - [描述](#描述)
@@ -14,14 +15,13 @@
 - [Spring Boot集成MyBatis](#Spring-Boot集成MyBatis)
 - [添加记录时获取到记录主键id](#添加记录时获取到记录主键id)
 - [MyBatis Generator代码自动生成工具](Mybatis-Generator.md)
+- [MyBatis源码分析](MyBatis-Code.md)
 
 ### 描述
 
 MyBatis原来是Apache的开源项目iBatis(internet abatis), 2010年迁移到Google Code改名为MyBatis，2013年11月迁移到GitHub。
 	
-MyBatis是一个基于Java的持久层框架。包括SQL Maps和Data Access Objects（DAOs）
-	
-解除了SQL和程序代码的耦合。提供XML标签，支持动态SQL。
+MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 Java 的 POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。
 
 ### 动态SQL
 
@@ -48,5 +48,3 @@ MyBatis是一个基于Java的持久层框架。包括SQL Maps和Data Access Obje
 - keyColumn：设置为数据库记录的主键id字段名称。
 
 新添加主键id并不是在执行添加操作时直接返回的，而是在执行添加操作之后将新添加记录的主键id字段设置为POJO对象的主键id属性。通过访问POJO对象的主键id属性即可返回。
-
-[**返回首页目录**](../../README.md)

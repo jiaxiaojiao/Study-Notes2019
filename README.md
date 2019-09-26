@@ -89,11 +89,11 @@
 - 数据库设计
 - 常见数据库
     - [Oracle](DataBase/Oracle.md) 关系型数据库，安全可靠
-    - [MySQL](DataBase/MySQL.md)  关系型数据库，开源
-    - [SQL Server](DataBase/SQL-Server.md) 关系型数据库，美国微软公司，操作简单。
+    - [MySQL](DataBase/MySQL/MySQL.md)  关系型数据库，开源
+    - [SQL Server](DataBase/SqlServer.md) 关系型数据库，美国微软公司，操作简单。
     - [DB2](DataBase/DB2.md) 关系型数据库，美国IBM公司，适用于大型应用系统。
     - [Sybase](DataBase/Sybase.md) 关系型数据库，美国Sybase公司，大型数据库系统。
-    - [Redis](DataBase/Redis.md)  NoSQL Key-Value存储数据库
+    - [Redis](DataBase/Redis/Redis.md)  NoSQL Key-Value存储数据库
         - 底层的实现细节
     - [HBase](DataBase/HBase.md)  NoSQL 分布式面向列的数据库
     - [MongoDb](DataBase/MongoDb.md) NoSQL 文档型数据库
@@ -139,7 +139,7 @@
 
 
 ### 软件工程与设计模式
-- [软件工程与UML](未整理/Software-Engineering.md)
+- [软件工程与UML](其他/Other/Software-Engineering.md)
 - 设计模式
 
 
@@ -152,20 +152,33 @@
 ### 其他
 
 - [程序开发语言](Language/Language.md)
-    - [Groovy](未整理/Groovy.md) 基于JVM的敏捷开发语言
+    - [Groovy](Language/Groovy.md) 基于JVM的敏捷开发语言
     - XML
     - JSON
-- [软件开发流程](未整理/Software-development-process.md)
-- [编码与加解密](未整理/Cryptography.md)
-- [解决Hash碰撞冲突的方法](未整理/Hash.md)
+- [软件开发流程](其他/Other/Software-development-process.md)
+- [编码与加解密](其他/Other/Cryptography.md)
+- [解决Hash碰撞冲突的方法](其他/Other/Hash.md)
 - [ELK](System/ELK.md) 日志系统
 - [Thymeleaf](Java/Thymeleaf.md)  Java模板引擎
 - Guava
-- [其他工具](未整理/Tools-Other.md)
+- [其他工具](其他/Tools-Other.md)
 - 安全
 - SOA/SCA/微服务
 - 区块链 BlockChain
+- [spring.io](https://spring.io/)
+- [apache](http://apache.org/)
+- [jBoss](https://www.jboss.org/)
+- [MyBatis参考文档](http://www.mybatis.org/mybatis-3/zh/index.html)
+- [jsonapi](http://jsonapi.org/)
+- [富文本编辑器ckeditor](https://ckeditor.com/ckeditor-4/)
+- [报表工具finereport](http://www.finereport.com/)
+- [学习工具quizlet](https://quizlet.com/zh-cn)
+- [tool.lu](https://tool.lu/)
+- [在线工具-API文档](http://tool.oschina.net/apidocs/apidoc?api=jdk-zh)
+- [阿里中间件团队博客taobao](http://jm.taobao.org/)
+- [w3school](http://www.w3school.com.cn)
 
----
+
+### 目标
 
 > 项目经理、软件工程师、研究员、安全架构师、信息安全

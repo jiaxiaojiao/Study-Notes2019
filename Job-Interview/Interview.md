@@ -13,7 +13,7 @@
 
 ## 面试题总结
 - [Java基础知识](SUM-UP/Java基础知识.md)
-- [集合框架](../未整理/Java/Collection/Collection.md)
+- [集合框架](../其他/Java/Collection/Collection.md)
 - [多线程](SUM-UP/多线程.md)
 - [JVM相关问题](SUM-UP/JVM相关问题.md)
 - [异常处理](SUM-UP/异常处理.md)

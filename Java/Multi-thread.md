@@ -93,7 +93,7 @@ Hibernate的数据库连接池就是将connection放进threadlocal实现的。
 
 ![Executor](../images/Java-Executor-1.png)
 
-接口：Executor,CompletionService,ExecutorService，ScheduledExecutorService
+接口：Executor,CompletionService,[ExecutorService](Concurrent/ExecutorService.md)，ScheduledExecutorService
 
 抽象类：AbstractExecutorService
 

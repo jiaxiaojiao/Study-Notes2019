@@ -16,7 +16,7 @@
 - 锁
 - 事务
 - 分库分表的设计和优化
-- 读写分离 垂直与水平拆分
+- [集群方案：读写分离，垂直与水平拆分](MySQL-Cluster.md)
 - [查看MySQL版本号-Windows](#查看MySQL版本号)
 - [MySQL WorkBench](MySQL-workbench.md)
 - [常用SQL](MySQL-sql.md)

@@ -7,6 +7,9 @@
 - Linux注意事项
 - JDK1.8环境安装
 - Tomcat安装与停止启动
+- [安装命令](Linux-install.md)
+- [使用MySQL](Linux-MySQL.md)
+- [卸载MySQL](Linux-MySQL-remove.md)
 - Linux 基础指令
     - [linux CPU大小](#CPU大小)
     - [内存大小](#内存大小)
@@ -57,6 +60,7 @@
     - [查看pci设备的信息](#查看pci设备的信息)
     - [查看所有swap分区的信息](#查看所有swap分区的信息)
 - [常用命令](#常用命令)
+    - [创建目录和删除目录](Linux-mkdir.md)
 
 ### CPU大小
 ```text
@@ -308,7 +312,6 @@ cat /proc/swaps
 ls -a | 列出目录所有文件
 cd [目录名] | 切换当前目录
 pwd | 查看当前工作目录路径
-mkdir | 创建文件夹
 rm | 删除
 mv | 移动文件或修改文件名
 cat | 显示文件

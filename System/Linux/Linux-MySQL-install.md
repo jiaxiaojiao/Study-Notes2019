@@ -2,8 +2,8 @@
 
 ### 目录
 - [yum安装 mysql5.7](#YUM安装)
-- [离线安装 mysql5.7](#离线安装)
-- 配置
+- [离线安装 mysql5.7](Linux-MySQL-install-off-line.md)
+- [配置主从](Linux-MySQL-config.md)
 
 
 ### YUM安装
@@ -59,6 +59,3 @@
     ```text
     mysql> GRANT ALL PRIVILEGES ON *.* TO 'jiaxiaojiao'@'%' IDENTIFIED BY 'JXJpass-4!' WITH GRANT OPTION;
     ```
-
-### 离线安装
-

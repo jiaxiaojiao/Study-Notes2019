@@ -385,7 +385,6 @@ Linux 内核项目组当时使用分布式版本控制系统 BitKeeper 来管理
 
 <div align="center">  
 <img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3deltas.png" width="500px"/>
-</br>
 </div>
 
 **我们怎样才能得到一个文件的最终版本呢？**
@@ -400,7 +399,6 @@ Git 不按照以上方式对待或保存数据。 反之，Git 更像是把数�
 
 <div align="center">  
 <img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3snapshots.png" width="500px"/>
-</br>
 </div>
 
 

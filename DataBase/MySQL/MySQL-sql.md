@@ -1,6 +1,14 @@
 ## 常用SQL
 
 ### 目录
+- [创建数据库](#创建数据库)
+- [删除数据库](#删除数据库)
+- [选择数据库](#选择数据库)
+- [数据类型](#数据类型)
+- [创建数据表](#创建数据表)
+- [删除数据表](#删除数据表)
+- [插入数据](#插入数据)
+- [查询数据](#查询数据)
 - [修改字段类型](#修改字段类型)
 - [修改表列名](#修改表列名)
 - [修改表名](#修改表名)
@@ -10,6 +18,50 @@
 - [IFNULL](#IFNULL)
 - [case when](#case-when)
 
+
+### 创建数据库
+
+    CREATE DATABASE 数据库名;
+    
+    # 或者 
+    CREATE DATABASE IF NOT EXISTS 数据库名 DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+    # 作用：  1. 如果数据库不存在则创建，存在则不创建。 2. 指定了编码集
+   
+
+### 删除数据库
+
+    drop database <数据库名>;
+
+### 选择数据库
+
+    use 数据库名;
+
+### 数据类型
+
+MySQL支持所有的标准SQL数据类型。
+
+这些类型包括严格数值数据类型(INTEGER、SMALLINT、DECIMAL和NUMERIC)，以及近似数值数据类型(FLOAT、REAL和DOUBLE PRECISION)。
+
+### 创建数据表
+
+    CREATE TABLE table_name (column_name column_type);
+
+### 删除数据表
+
+    DROP TABLE table_name ;
+
+### 插入数据
+
+    INSERT INTO table_name ( field1, field2,...fieldN )
+                           VALUES
+                           ( value1, value2,...valueN );
+
+### 查询数据
+
+    SELECT column_name,column_name
+    FROM table_name
+    [WHERE Clause]
+    [LIMIT N][ OFFSET M]
 
 ### 修改字段类型
 

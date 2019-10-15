@@ -1,5 +1,7 @@
 ## CollectionUtils 工具类
 
+> Spring的工具包： org.springframework.util.CollectionUtils
+> 
 > CollectionUtils可以使代码更加简洁和安全。 
 
 ### 目录

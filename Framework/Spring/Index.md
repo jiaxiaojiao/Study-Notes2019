@@ -12,13 +12,13 @@
 
 ### Spring Boot
 
-- [Spring Boot 项目连接数据库-与MyBatis集成](Spring-Boot/Spring-Boot-Use1.md) 代码
+- [Spring Boot 项目连接数据库-与MyBatis集成](Spring-Boot/Spring-Boot-use01.md) 代码
 
 ### Spring Data
 
 ### Spring Cloud
 
-- [微服务为什么选择Spring Cloud？](Spring-Cloud-Why.md)
+- [微服务为什么选择Spring Cloud？](Spring-Cloud/Spring-Cloud-why.md)
 
 ### 注解
 

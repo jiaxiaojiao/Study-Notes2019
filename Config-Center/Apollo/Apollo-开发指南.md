@@ -1,12 +1,15 @@
-* [一、准备工作](#%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)
-* [二、本地启动](#%E4%BA%8C%E6%9C%AC%E5%9C%B0%E5%90%AF%E5%8A%A8)
-    * [2.1 Apollo Config Service和Apollo Admin Service](#21-apollo-config-service%E5%92%8Capollo-admin-service)
+## Apollo开发指南
+
+### 目录
+* [一、准备工作](#一、准备工作)
+* [二、本地启动](#二、本地启动)
+    * [2.1 Apollo Config Service和Apollo Admin Service](#2.1-Apollo-Config-Service和Apollo-Admin-Service)
     * [2.2 Apollo-Portal](#22-apollo-portal)
-    * [2.3 Java样例客户端启动](#23-java%E6%A0%B7%E4%BE%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%AF%E5%8A%A8)
-    * [2.4 .Net样例客户端启动](#24-net%E6%A0%B7%E4%BE%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%AF%E5%8A%A8)
-* [三、开发](#%E4%B8%89%E5%BC%80%E5%8F%91)
-    * [3.1 Portal 实现用户登录功能](#31-portal-%E5%AE%9E%E7%8E%B0%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD)
-    * [3.2 Portal接入邮件服务](#32-portal%E6%8E%A5%E5%85%A5%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1)
+    * [2.3 Java样例客户端启动](#2.3-Java样例客户端启动)
+    * [2.4 .Net样例客户端启动](#2.4-.Net样例客户端启动)
+* [三、开发](#三、开发)
+    * [3.1 Portal 实现用户登录功能](#3.1-Portal-实现用户登录功能)
+    * [3.2 Portal接入邮件服务](#3.2-Portal接入邮件服务)
 
 本文档介绍了如何在本地使用IDE编译、运行Apollo，从而可以帮助大家了解Apollo的内在运行机制，同时也为自定义开发做好准备。
 
@@ -19,13 +22,13 @@ Apollo本地开发需要以下组件：
 3. IDE: 没有特殊要求
 
 其中MySQL需要创建Apollo数据库并导入基础数据。
-具体步骤请参考[分布式部署指南](https://github.com/ctripcorp/apollo/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97)中的以下部分：
+具体步骤请参考[分布式部署指南](Apollo-分布式部署.md)中的以下部分：
 
-1. [一、准备工作](https://github.com/ctripcorp/apollo/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97#%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)
-2. [2.1 创建数据库](https://github.com/ctripcorp/apollo/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97#21-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93)
+1. [一、准备工作](Apollo-分布式部署.md#一准备工作)
+2. [2.1 创建数据库](Apollo-分布式部署.md#21-创建数据库)
 
 ## 1.2 Apollo总体设计
-具体请参考[Apollo配置中心设计](https://github.com/ctripcorp/apollo/wiki/Apollo%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83%E8%AE%BE%E8%AE%A1)
+具体请参考[Apollo配置中心设计](Apollo-配置中心设计.md)
 
 # 二、本地启动
 ## 2.1 Apollo Config Service和Apollo Admin Service
@@ -33,10 +36,10 @@ Apollo本地开发需要以下组件：
 
 下面以Intellij Community 2016.2版本为例来说明如何在本地启动`apollo-configservice`和`apollo-adminservice`。
 
-![ConfigAdminApplication-Overview](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/ConfigAdminApplication-Overview.png)
+![ConfigAdminApplication-Overview](../../images/apollo/ConfigAdminApplication-Overview.png)
 
 ### 2.1.1 新建运行配置
-![NewConfiguration-Application](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/NewConfiguration-Application.png)
+![NewConfiguration-Application](../../images/apollo/NewConfiguration-Application.png)
 
 ### 2.1.2 Main class配置
 `com.ctrip.framework.apollo.assembly.ApolloApplication`
@@ -46,7 +49,7 @@ Apollo本地开发需要以下组件：
 > `com.ctrip.framework.apollo.adminservice.AdminServiceApplication`
 
 ### 2.1.3 VM options配置
-![ConfigAdminApplication-VM-Options](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/ConfigAdminApplication-VM-Options.png)
+![ConfigAdminApplication-VM-Options](../../images/apollo/ConfigAdminApplication-VM-Options.png)
 
 	-Dapollo_profile=github
 	-Dspring.datasource.url=jdbc:mysql://localhost:3306/ApolloConfigDB?characterEncoding=utf8
@@ -65,26 +68,26 @@ Apollo本地开发需要以下组件：
 ### 2.1.5 运行
 对新建的运行配置点击Run或Debug皆可。
 
-![ConfigAdminApplication-Run](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/ConfigAdminApplication-Run.png)
+![ConfigAdminApplication-Run](../../images/apollo/ConfigAdminApplication-Run.png)
 
 启动完后，打开[http://localhost:8080](http://localhost:8080)可以看到`apollo-configservice`和`apollo-adminservice`都已经启动完成并注册到Eureka。
 
-![ConfigAdminApplication-Eureka](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/ConfigAdminApplication-Eureka.png)
+![ConfigAdminApplication-Eureka](../../images/apollo/ConfigAdminApplication-Eureka.png)
 
 ## 2.2 Apollo-Portal
 
 下面以Intellij Community 2016.2版本为例来说明如何在本地启动`apollo-portal`。
 
-![PortalApplication-Overview](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/PortalApplication-Overview.png)
+![PortalApplication-Overview](../../images/apollo/PortalApplication-Overview.png)
 
 ### 2.2.1 新建运行配置
-![NewConfiguration-Application](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/NewConfiguration-Application.png)
+![NewConfiguration-Application](../../images/apollo/NewConfiguration-Application.png)
 
 ### 2.2.2 Main class配置
 `com.ctrip.framework.apollo.portal.PortalApplication`
 
 ### 2.2.3 VM options配置
-![PortalApplication-VM-Options](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/PortalApplication-VM-Options.png)
+![PortalApplication-VM-Options](../../images/apollo/PortalApplication-VM-Options.png)
 
 	-Dapollo_profile=github,auth
 	-Ddev_meta=http://localhost:8080/
@@ -108,11 +111,11 @@ Apollo本地开发需要以下组件：
 ### 2.2.4 运行
 对新建的运行配置点击Run或Debug皆可。
 
-![PortalApplication-Run](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/PortalApplication-Run.png)
+![PortalApplication-Run](../../images/apollo/PortalApplication-Run.png)
 
 启动完后，打开[http://localhost:8070](http://localhost:8070)就可以看到Apollo配置中心界面了。
 
-![PortalApplication-Home](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/PortalApplication-Home.png)
+![PortalApplication-Home](../../images/apollo/PortalApplication-Home.png)
 
 >注：如果启用了`auth` profile的话，默认的用户名是apollo，密码是admin
 
@@ -120,7 +123,7 @@ Apollo本地开发需要以下组件：
 
 为了更好的开发和调试，一般我们都会自己创建一个demo项目给自己使用。
 
-可以参考[应用接入指南](https://github.com/ctripcorp/apollo/wiki/%E5%BA%94%E7%94%A8%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97)中的[一、普通应用接入指南](https://github.com/ctripcorp/apollo/wiki/%E5%BA%94%E7%94%A8%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97#%E4%B8%80%E6%99%AE%E9%80%9A%E5%BA%94%E7%94%A8%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97)创建自己的demo项目。
+可以参考应用接入指南中的一、普通应用接入指南创建自己的demo项目。
 
 ## 2.3 Java样例客户端启动
 
@@ -129,7 +132,7 @@ Apollo本地开发需要以下组件：
 ### 2.3.1 配置项目AppId
 在`2.2.5 Demo应用接入`中创建Demo项目时，系统会要求填入一个全局唯一的AppId，我们需要把这个AppId配置到`apollo-demo`项目的app.properties文件中：`apollo-demo/src/main/resources/META-INF/app.properties`。
 
-![apollo-demo-app-properties](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/apollo-demo-app-properties.png)
+![apollo-demo-app-properties](../../images/apollo/apollo-demo-app-properties.png)
 
 如我们自己的demo项目使用的AppId是100004458，那么文件内容就是：
 
@@ -139,16 +142,16 @@ Apollo本地开发需要以下组件：
 
 > 对于公共Namespace的配置，没有AppId也可以获取到配置，但是就失去了应用覆盖公共Namespace配置的能力。
 
-> 更多配置AppId的方式可以参考[1.2.1 AppId](https://github.com/ctripcorp/apollo/wiki/Java%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#121-appid)
+> 更多配置AppId的方式可以参考[1.2.1 AppId](Apollo-Java-Client.md#121-appid)
 
 ### 2.3.2 新建运行配置
-![NewConfiguration-Application](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/NewConfiguration-Application.png)
+![NewConfiguration-Application](../../images/apollo/NewConfiguration-Application.png)
 
 ### 2.3.3 Main class配置
 `SimpleApolloConfigDemo`
 
 ### 2.3.4 VM options配置
-![apollo-demo-vm-options](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/apollo-demo-vm-options.png)
+![apollo-demo-vm-options](../../images/apollo/apollo-demo-vm-options.png)
 
     -Dapollo.meta=http://localhost:8080
 
@@ -158,12 +161,12 @@ Apollo本地开发需要以下组件：
 
 ### 2.3.5 概览
 
-![apollo-demo-overview](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/apollo-demo-overview.png)
+![apollo-demo-overview](../../images/apollo/apollo-demo-overview.png)
 
 ### 2.3.6 运行
 对新建的运行配置点击Run或Debug皆可。
 
-![apollo-demo-run](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/local-development/apollo-demo-run.png)
+![apollo-demo-run](../../images/apollo/apollo-demo-run.png)
 
 启动完后，忽略前面的调试信息，可以看到如下提示：
 
@@ -189,7 +192,7 @@ Apollo本地开发需要以下组件：
 ### 2.4.1 配置项目AppId
 在`2.2.5 Demo应用接入`中创建Demo项目时，系统会要求填入一个全局唯一的AppId，我们需要把这个AppId配置到`ApolloDemo`项目的APP.config文件中：`apollo.net\ApolloDemo\App.config`。
 
-![apollo-demo-app-config](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/apollo-net-app-config.png)
+![apollo-demo-app-config](../../images/apollo/apollo-net-app-config.png)
 
 如我们自己的demo项目使用的AppId是100004458，那么文件内容就是：
 ```xml
@@ -203,7 +206,7 @@ Apollo本地开发需要以下组件：
 ### 2.4.2 配置服务地址
 Apollo客户端针对不同的环境会从不同的服务器获取配置，所以我们需要在app.config或web.config配置服务器地址(Apollo.{ENV}.Meta)。假设DEV环境的配置服务(apollo-configservice)地址是11.22.33.44，那么我们就做如下配置：
 
-![apollo-net-server-url-config](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/apollo-net-server-url-config.png)
+![apollo-net-server-url-config](../../images/apollo/apollo-net-server-url-config.png)
 
 ### 2.4.3 运行
 运行`ApolloConfigDemo.cs`即可。
@@ -224,11 +227,11 @@ Apollo客户端针对不同的环境会从不同的服务器获取配置，所�
 
 # 三、开发
 ## 模块依赖图
-![模块依赖图](https://github.com/ctripcorp/apollo/blob/master/doc/images/module-dependency.png)
+![模块依赖图](../../images/apollo/module-dependency.png)
 
 ## 3.1 Portal 实现用户登录功能
 
-请参考[Portal 实现用户登录功能](https://github.com/ctripcorp/apollo/wiki/Portal-%E5%AE%9E%E7%8E%B0%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD)
+请参考[Portal 实现用户登录功能](Apollo-Portal-实现用户登录功能.md)
 
 ## 3.2 Portal接入邮件服务
 
@@ -247,7 +250,7 @@ Apollo客户端针对不同的环境会从不同的服务器获取配置，所�
   * **email.template.release.module.diff** 发布邮件的diff模块。
   * **email.template.rollback.module.diff** 回滚邮件的diff模块。
   * **email.template.release.module.rules** 灰度发布的灰度规则模块。
-   我们提供了以上[邮件模板样例](https://github.com/ctripcorp/apollo/wiki/%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF%E6%A0%B7%E4%BE%8B)，方便大家使用。
+   我们提供了以上[邮件模板样例](Apollo-邮件模板样例.md)，方便大家使用。
 
 >注：运行时使用不同的实现是通过[Profiles](http://docs.spring.io/autorepo/docs/spring-boot/current/reference/html/boot-features-profiles.html)实现的，比如你自己的Email实现是在`custom` profile中的话，在打包脚本中可以指定-Dapollo_profile=github,custom。其中`github`是Apollo必须的一个profile，用于数据库的配置，`custom`是你自己实现的profile。同时需要注意在[EmailConfiguration](https://github.com/ctripcorp/apollo/blob/master/apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/EmailConfiguration.java)中修改默认实现的条件`@Profile({"!custom"})`。
 

@@ -243,7 +243,7 @@ Apollo Config Demo. Please input key to get the value. Input quit to exit.
 
 ## 4.2 使用新的项目
 ### 4.2.1 应用接入Apollo
-这部分可以参考[Java应用接入指南](Java%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)
+这部分可以参考[Java应用接入指南](Java%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.md)
 
 ### 4.2.2 运行客户端程序
 由于使用了新的项目，所以客户端需要修改appId信息。

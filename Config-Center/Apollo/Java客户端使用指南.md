@@ -1,30 +1,25 @@
-## Java客户端使用指南
-
-> Java客户端接入。
-
-### 目录
-* [一、准备工作](#一、准备工作)
-* [二、Maven Dependency](#二、Maven-Dependency)
-* [三、客户端用法](#三、客户端用法)
-    * [3.1 API使用方式](#3.1-API使用方式)
-        * [3.1.1 获取默认namespace的配置](#3.1.1-获取默认namespace的配置（application）)
-        * [3.1.2 监听配置变化事件](#3.1.2-监听配置变化事件)
-        * [3.1.3 获取公共Namespace的配置](#3.1.3-获取公共Namespace的配置)
-        * [3.1.4 获取非properties格式namespace的配置](#3.1.4-获取非properties格式namespace的配置)
-    * [3.2 Spring整合方式](#3.2-Spring整合方式)
-        * [3.2.1 配置](#3.2.1-配置)
-            * [3.2.1.1 基于XML的配置](#3.2.1.1-基于XML的配置)
-            * [3.2.1.2 基于Java的配置（推荐）](#3.2.1.2-基于Java的配置（推荐）)
-            * [3.2.1.3 Spring Boot集成方式（推荐）](#3.2.1.3-Spring-Boot集成方式（推荐）)
-        * [3.2.2 Spring Placeholder的使用](#3.2.2-Spring-Placeholder的使用)
-        * [3.2.3 Spring Annotation支持](#3.2.3-Spring-Annotation支持)
-        * [3.2.4 已有配置迁移](#3.2.4-已有配置迁移)
+* [一、准备工作](#%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)
+* [二、Maven Dependency](#%E4%BA%8Cmaven-dependency)
+* [三、客户端用法](#%E4%B8%89%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%94%A8%E6%B3%95)
+    * [3.1 API使用方式](#31-api%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
+        * [3.1.1 获取默认namespace的配置](#311-%E8%8E%B7%E5%8F%96%E9%BB%98%E8%AE%A4namespace%E7%9A%84%E9%85%8D%E7%BD%AEapplication)
+        * [3.1.2 监听配置变化事件](#312-%E7%9B%91%E5%90%AC%E9%85%8D%E7%BD%AE%E5%8F%98%E5%8C%96%E4%BA%8B%E4%BB%B6)
+        * [3.1.3 获取公共Namespace的配置](#313-%E8%8E%B7%E5%8F%96%E5%85%AC%E5%85%B1namespace%E7%9A%84%E9%85%8D%E7%BD%AE)
+        * [3.1.4 获取非properties格式namespace的配置](#314-%E8%8E%B7%E5%8F%96%E9%9D%9Eproperties%E6%A0%BC%E5%BC%8Fnamespace%E7%9A%84%E9%85%8D%E7%BD%AE)
+    * [3.2 Spring整合方式](#32-spring%E6%95%B4%E5%90%88%E6%96%B9%E5%BC%8F)
+        * [3.2.1 配置](#321-%E9%85%8D%E7%BD%AE)
+            * [3.2.1.1 基于XML的配置](#3211-%E5%9F%BA%E4%BA%8Exml%E7%9A%84%E9%85%8D%E7%BD%AE)
+            * [3.2.1.2 基于Java的配置（推荐）](#3212-%E5%9F%BA%E4%BA%8Ejava%E7%9A%84%E9%85%8D%E7%BD%AE%E6%8E%A8%E8%8D%90)
+            * [3.2.1.3 Spring Boot集成方式（推荐）](#3213-spring-boot%E9%9B%86%E6%88%90%E6%96%B9%E5%BC%8F%E6%8E%A8%E8%8D%90)
+        * [3.2.2 Spring Placeholder的使用](#322-spring-placeholder%E7%9A%84%E4%BD%BF%E7%94%A8)
+        * [3.2.3 Spring Annotation支持](#323-spring-annotation%E6%94%AF%E6%8C%81)
+        * [3.2.4 已有配置迁移](#324-%E5%B7%B2%E6%9C%89%E9%85%8D%E7%BD%AE%E8%BF%81%E7%A7%BB)
     * [3.3 Demo](#33-demo)
-* [四、客户端设计](#四、客户端设计)
-* [五、本地开发模式](#五、本地开发模式)
-* [六、测试模式](#六、测试模式)
+* [四、客户端设计](#%E5%9B%9B%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AE%BE%E8%AE%A1)
+* [五、本地开发模式](#%E4%BA%94%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F)
+* [六、测试模式](#%E5%85%AD%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%BC%8F)
 
->注意：本文档适用对象是Apollo系统的使用者，如果你是公司内Apollo系统的开发者/维护人员，建议先参考[Apollo开发指南](Apollo-开发指南.md)。
+>注意：本文档适用对象是Apollo系统的使用者，如果你是公司内Apollo系统的开发者/维护人员，建议先参考[Apollo开发指南](Apollo%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97)。
 
 # 一、准备工作
 ## 1.1 环境要求
@@ -77,13 +72,13 @@ app.id=YOUR-APP-ID
 
 文件位置参考如下：
 
-![app-id-location](../../images/apollo/app-id-location.png)
+![app-id-location](https://github.com/ctripcorp/apollo/blob/master/apollo-client/doc/pic/app-id-location.png)
 
 > 注：app.id是用来标识应用身份的唯一id，格式为string。
 
 ### 1.2.2 Apollo Meta Server
 
-Apollo支持应用在不同的环境有不同的配置，所以需要在运行提供给Apollo客户端当前环境的[Apollo Meta Server](Apollo-配置中心设计.md#133-meta-server)信息。默认情况下，meta server和config service是部署在同一个JVM进程，所以meta server的地址就是config service的地址。
+Apollo支持应用在不同的环境有不同的配置，所以需要在运行提供给Apollo客户端当前环境的[Apollo Meta Server](Apollo%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83%E8%AE%BE%E8%AE%A1#133-meta-server)信息。默认情况下，meta server和config service是部署在同一个JVM进程，所以meta server的地址就是config service的地址。
 
 为了实现meta server的高可用，推荐通过SLB（Software Load Balancer）做动态负载均衡。Meta server地址也可以填入IP，如`http://1.1.1.1:8080,http://2.2.2.2:8080`，不过生产环境还是建议使用域名（走slb），因为机器扩容、缩容等都可能导致IP列表的变化。
 
@@ -153,7 +148,7 @@ Apollo客户端会把从服务端获取到的配置在本地文件系统缓存�
 * appId就是应用自己的appId，如100004458
 * cluster就是应用使用的集群，一般在本地模式下没有做过配置的话，就是default
 * namespace就是应用使用的配置namespace，一般是application
-![client-local-cache](../../images/apollo/client-local-cache.png)
+![client-local-cache](https://github.com/ctripcorp/apollo/blob/master/apollo-client/doc/pic/client-local-cache.png)
 
 文件内容以properties格式存储，比如如果有两个key，一个是request.timeout，另一个是batch，那么文件内容就是如下格式：
 ```properties
@@ -285,7 +280,7 @@ Apollo支持API方式和Spring整合方式，该怎么选择用哪一种方式�
         * 配置文件中使用替换placeholder，如：`spring.datasource.url: ${someKeyFromApollo:someDefaultValue}`
         * 直接托管spring的配置，如在apollo中直接配置`spring.datasource.url=jdbc:mysql://localhost:3306/somedb?characterEncoding=utf8`
     * Spring boot的[@ConfigurationProperties](http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/context/properties/ConfigurationProperties.html)方式
-    * 从v0.10.0开始的版本支持placeholder在运行时自动更新，具体参见[PR #972](https://github.com/ctripcorp/apollo/pull/972)。（v0.10.0之前的版本在配置变化后不会重新注入，需要重启才会更新，如果需要配置值实时更新，可以参考后续[3.2.2 Spring Placeholder的使用](#3.2.2 Spring Placeholder的使用)的说明）
+    * 从v0.10.0开始的版本支持placeholder在运行时自动更新，具体参见[PR #972](https://github.com/ctripcorp/apollo/pull/972)。（v0.10.0之前的版本在配置变化后不会重新注入，需要重启才会更新，如果需要配置值实时更新，可以参考后续[3.2.2 Spring Placeholder的使用](#322-spring-placeholder%E7%9A%84%E4%BD%BF%E7%94%A8)的说明）
 * Spring方式也可以结合API方式使用，如注入Apollo的Config对象，就可以照常通过API方式获取配置了：
     ```java
     @ApolloConfig
@@ -364,7 +359,7 @@ Apollo也支持和Spring整合（Spring 3.1.1+），只需要做一些简单的�
 
 Apollo目前既支持比较传统的`基于XML`的配置，也支持目前比较流行的`基于Java（推荐）`的配置。
 
-如果是Spring Boot环境，建议参照[3.2.1.3 Spring Boot集成方式（推荐）](#3.2.1.3-spring-boot集成方式（推荐）)配置。
+如果是Spring Boot环境，建议参照[3.2.1.3 Spring Boot集成方式（推荐）](#3213-spring-boot%E9%9B%86%E6%88%90%E6%96%B9%E5%BC%8F%E6%8E%A8%E8%8D%90)配置。
 
 需要注意的是，如果之前有使用`org.springframework.beans.factory.config.PropertyPlaceholderConfigurer`的，请替换成`org.springframework.context.support.PropertySourcesPlaceholderConfigurer`。Spring 3.1以后就不建议使用PropertyPlaceholderConfigurer了，要改用PropertySourcesPlaceholderConfigurer。
 
@@ -774,15 +769,15 @@ eureka.client.eurekaServiceUrlPollIntervalSeconds = 60
 eureka.instance.preferIpAddress = true
 ```
 
-![text-mode-spring-boot-config-sample](../../images/apollo/text-mode-spring-boot-config-sample.png)
+![text-mode-spring-boot-config-sample](https://github.com/ctripcorp/apollo/blob/master/doc/images/text-mode-spring-boot-config-sample.png)
 
 ## 3.3 Demo
-项目中有一个样例客户端的项目：`apollo-demo`，具体信息可以参考[Apollo开发指南](Apollo-开发指南.md)中的[2.3 Java样例客户端启动](Apollo-开发指南.md#23-java样例客户端启动)部分。
+项目中有一个样例客户端的项目：`apollo-demo`，具体信息可以参考[Apollo开发指南](Apollo%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97)中的[2.3 Java样例客户端启动](Apollo%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97#23-java%E6%A0%B7%E4%BE%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%AF%E5%8A%A8)部分。
 
 更多使用案例Demo可以参考[Apollo使用场景和示例代码](https://github.com/ctripcorp/apollo-use-cases)。
 
 # 四、客户端设计
-![client-architecture](../../images/apollo/client-architecture.png)
+![client-architecture](https://github.com/ctripcorp/apollo/raw/master/doc/images/client-architecture.png)
 
 上图简要描述了Apollo客户端的实现原理：
 
@@ -810,7 +805,7 @@ Apollo客户端还支持本地开发模式，这个主要用于当开发环境�
 env=Local
 ```
 
-更多配置环境的方式请参考1.2.2 Environment
+更多配置环境的方式请参考[1.2.2 Environment](#122-environment)
 
 ## 5.2 准备本地配置文件
 在本地开发模式下，Apollo客户端会从本地读取文件，所以我们需要事先准备好配置文件。
@@ -834,7 +829,7 @@ appId就是应用的appId，如100004458。
 * appId就是应用自己的appId，如100004458
 * cluster就是应用使用的集群，一般在本地模式下没有做过配置的话，就是default
 * namespace就是应用使用的配置namespace，一般是application
-![client-local-cache](../../images/apollo/client-local-cache.png)
+![client-local-cache](https://github.com/ctripcorp/apollo/blob/master/apollo-client/doc/pic/client-local-cache.png)
 
 文件内容以properties格式存储，比如如果有两个key，一个是request.timeout，另一个是batch，那么文件内容就是如下格式：
 ```properties
@@ -863,7 +858,7 @@ batch=2000
 
 文件名格式约定为`mockdata-{namespace}.properties`
 
-![image](../../images/apollo/44515526-5e0e6480-a6f5-11e8-9c3c-4ff2ec737c8d.png)
+![image](https://user-images.githubusercontent.com/17842829/44515526-5e0e6480-a6f5-11e8-9c3c-4ff2ec737c8d.png)
 
 ## 6.3 写测试类
 

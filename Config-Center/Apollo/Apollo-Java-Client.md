@@ -15,7 +15,7 @@
         * [3.2.1 配置](#3.2.1-配置)
             * [3.2.1.1 基于XML的配置](#3.2.1.1-基于XML的配置)
             * [3.2.1.2 基于Java的配置（推荐）](#3.2.1.2-基于Java的配置（推荐）)
-            * [3.2.1.3 Spring Boot集成方式（推荐）](#3.2.1.3-Spring Boot集成方式（推荐）)
+            * [3.2.1.3 Spring Boot集成方式（推荐）](#3.2.1.3-Spring-Boot集成方式（推荐）)
         * [3.2.2 Spring Placeholder的使用](#3.2.2-Spring-Placeholder的使用)
         * [3.2.3 Spring Annotation支持](#3.2.3-Spring-Annotation支持)
         * [3.2.4 已有配置迁移](#3.2.4-已有配置迁移)

@@ -61,6 +61,8 @@
     - [查看所有swap分区的信息](#查看所有swap分区的信息)
 - [常用命令](#常用命令)
     - [创建目录和删除目录](Linux-mkdir.md)
+    - [压缩和解压缩](Linux-)
+    - tar -zxvf mysql-5.7.27-linux-glibc2.12-x86_64.tar.gz
 
 ### CPU大小
 ```text

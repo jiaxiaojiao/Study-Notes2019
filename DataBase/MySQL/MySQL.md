@@ -20,9 +20,11 @@
 - [集群方案：读写分离，垂直与水平拆分](MySQL-Cluster.md)
 - [查看MySQL版本号-Windows](#查看MySQL版本号)
 - [MySQL WorkBench](MySQL-workbench.md)
+- [MySQL保留字/关键字](MySQL-Keyword.md)
 - [常用SQL](MySQL-sql.md)
     - [SQL日期](MySQL-date.md)
     - [SQL时间](MySQL-time.md)
+    - [修改密码](MySQL-u-p.md)
     - [查询连续登陆天数](MySQL-incessancydays.md)
     - [分析SQL语句](MySQL-explain.md)
     

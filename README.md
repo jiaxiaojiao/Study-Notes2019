@@ -84,15 +84,11 @@
 - [fiddler]()
 
 
-### [数据库](DataBase/Index.md)
+### 数据库
 - 基本概念
 - 数据库设计
 - 常见数据库
-    - [Oracle](DataBase/Oracle.md) 关系型数据库，安全可靠
     - [MySQL](DataBase/MySQL/MySQL.md)  关系型数据库，开源
-    - [SQL Server](DataBase/SqlServer.md) 关系型数据库，美国微软公司，操作简单。
-    - [DB2](DataBase/DB2.md) 关系型数据库，美国IBM公司，适用于大型应用系统。
-    - [Sybase](DataBase/Sybase.md) 关系型数据库，美国Sybase公司，大型数据库系统。
     - [Redis](DataBase/Redis/Redis.md)  NoSQL Key-Value存储数据库
         - 底层的实现细节
     - [HBase](DataBase/HBase.md)  NoSQL 分布式面向列的数据库

@@ -8,10 +8,8 @@
 - 多线程
 - 线程池的工作原理
 - 索引，什么时候用索引
-- 分布式，dubbo zookeeper
+- 分布式，zookeeper
 - zookeeper
-- dubbo的负载策略，容错机制
-- dubbo支持的协议
 - 备份、集群
 - 应用场景
 

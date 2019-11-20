@@ -18,7 +18,6 @@
 - [JVM相关问题](SUM-UP/JVM相关问题.md)
 - [异常处理](SUM-UP/异常处理.md)
 - [框架相关问题](SUM-UP/框架相关问题.md)
-- [消息中间件](SUM-UP/消息中间件.md)
 - [Redis](SUM-UP/Redis.md)
 - [数据库](SUM-UP/数据库.md)
 - [其他](SUM-UP/其他.md)

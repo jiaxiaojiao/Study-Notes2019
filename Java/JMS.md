@@ -5,4 +5,3 @@
 
 ### 目录
 - 原理
-- ActiveMQ金额Kafka

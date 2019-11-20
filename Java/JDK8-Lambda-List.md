@@ -1,6 +1,11 @@
 ## Lambda 表达式处理List
 1. 从List中获取一个属性的集合
+
+    1111
+
 2. List<A>转成List<B>
+
+    2222
 3. 遍历List
 4. List转成Map
 5. List分组
